@@ -167,47 +167,79 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            Container(
-              height: MediaQuery.of(context).size.height,  // Set the height of the container to the screen height
+      body: Stack(
+        children: [
+          Expanded(
+            child: Container(
+              width: double.infinity,
               color: Colors.white,
             ),
-            SizedBox(
-              width: double.infinity,
-              child: Image.asset(
-                'assets/img/Banner.png',
-                fit: BoxFit.fitWidth,
-                alignment: Alignment.topCenter,
-              ),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          ),
+          SingleChildScrollView(
+            child: Stack(
               children: [
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: AppTitle(),
+                SizedBox(
+                  width: double.infinity,
+                  child: Image.asset(
+                    'assets/img/Banner.png',
+                    fit: BoxFit.fitWidth,
+                    alignment: Alignment.topCenter,
+                  ),
                 ),
-                const SizedBox(height: 23),
-                const Destination(),
-                const SizedBox(height: 35),
-                Bookmarks(
-                  bookmarks: bookmarks,
-                  onAdd: _addBookmark,
-                  onEdit: _showBookmarkDetails,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Align(
+                      alignment: Alignment.centerLeft,
+                      child: AppTitle(),
+                    ),
+                    const SizedBox(height: 23),
+                    const Destination(),
+                    const SizedBox(height: 35),
+                    Bookmarks(
+                      bookmarks: bookmarks,
+                      onAdd: _addBookmark,
+                      onEdit: _showBookmarkDetails,
+                    ),
+                  ],
                 ),
               ],
             ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                color: Colors.grey,
-                child: Text('Test'),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              height: 80,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    spreadRadius: 2,
+                    blurRadius: 20,
+                    offset: const Offset(0, -2),
+                  ),
+                ],
+              ),
+              child: FilledButton(
+                style: FilledButton.styleFrom(
+                  backgroundColor: const Color(0xFFfb5377),
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Choose from map',
+                  style: TextStyle(
+                    fontFamily: 'SanomatGrab',
+                    fontSize: 16,
+                  ),
+                ),
               ),
             ),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }
