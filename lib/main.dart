@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pupathfinder/pages/home/home.dart';
 
-// test commit
+// test commit 02
 
 void main() {
   runApp(const MyApp());
