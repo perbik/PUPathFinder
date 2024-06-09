@@ -6,6 +6,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:pupathfinder/pages/home/pageBookmarks.dart';
 import 'package:pupathfinder/pages/home/sectionSearch.dart';
+import '../map/map.dart';
 import 'sectionTitle.dart';
 import '../../model/bookmark_icons_list.dart';  // Import the file that contains the icon list
 
@@ -209,9 +210,9 @@ class _HomeState extends State<Home> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-              height: 80,
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
               width: double.infinity,
+              height: 100,
               decoration: BoxDecoration(
                 color: Colors.white,
                 boxShadow: [
@@ -227,8 +228,14 @@ class _HomeState extends State<Home> {
                 style: FilledButton.styleFrom(
                   backgroundColor: const Color(0xFFfb5377),
                   foregroundColor: Colors.white,
+                  minimumSize: const Size(double.infinity, 65),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MapPage()),
+                  );
+                },
                 child: const Text(
                   'Choose from map',
                   style: TextStyle(

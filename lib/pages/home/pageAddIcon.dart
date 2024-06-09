@@ -125,6 +125,7 @@ class AddIconPageState extends State<AddIconPage> {
               ),
               const SizedBox(height: 20),
               FilledButton(
+
                 style: FilledButton.styleFrom(
                   backgroundColor: const Color(0xFFfb5377),
                   foregroundColor: Colors.white,
