@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'facilities_list.dart';
-import 'facilities_model.dart';
-import 'bookmark_icons_list.dart';
+import '../../model/facilities_list.dart';
+import '../../model/facilities_model.dart';
+import '../../model/bookmark_icons_list.dart';
 
 class AddIconPage extends StatefulWidget {
   const AddIconPage({super.key});

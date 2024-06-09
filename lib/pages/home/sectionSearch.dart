@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'facilities_model.dart';
-import 'facilities_list.dart';
+import '../../model/facilities_model.dart';
+import '../../model/facilities_list.dart';
 
 class Destination extends StatefulWidget {
   const Destination({super.key});
