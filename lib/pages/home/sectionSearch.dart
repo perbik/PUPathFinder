@@ -37,7 +37,7 @@ class _DestinationState extends State<Destination> {
                 fontFamily: 'SanomatGrab',
                 fontWeight: FontWeight.w500,
                 fontSize: 16,
-                // You can also set other TextStyle properties here
+
               ),
               decoration: InputDecoration(
                 filled: true,

@@ -66,6 +66,7 @@ flutter:
     - assets/img/Banner.png
     - assets/icons/Bookmark.png
     - assets/icons/Class.png
+    - assets/icons/Direction.png
     - assets/icons/Favorite.png
     - assets/icons/Location.png
     - assets/icons/LocationFill.png
