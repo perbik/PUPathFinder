@@ -6,14 +6,19 @@ class Bookmarks extends StatelessWidget {
   final Function(Map<String, dynamic>) onAdd;
   final Function(BuildContext, int) onEdit;
 
-  const Bookmarks({super.key, required this.bookmarks, required this.onAdd, required this.onEdit});
+  const Bookmarks(
+      {super.key,
+      required this.bookmarks,
+      required this.onAdd,
+      required this.onEdit});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,  // Align column to the start (left)
+        crossAxisAlignment:
+            CrossAxisAlignment.start, // Align column to the start (left)
         children: [
           Row(
             children: [
@@ -55,7 +60,8 @@ class Bookmarks extends StatelessWidget {
                 ...bookmarks.map((bookmark) {
                   int index = bookmarks.indexOf(bookmark);
                   return Padding(
-                    padding: const EdgeInsets.only(right: 20), // Add spacing between icons
+                    padding: const EdgeInsets.only(
+                        right: 20), // Add spacing between icons
                     child: Column(
                       children: [
                         IconButton(
@@ -83,7 +89,8 @@ class Bookmarks extends StatelessWidget {
                                 fontSize: 14,
                               ),
                               maxLines: 1, // Ensure label is on a single line
-                              textAlign: TextAlign.center, // Center-align text within the container
+                              textAlign: TextAlign
+                                  .center, // Center-align text within the container
                             ),
                           ),
                         ),
@@ -95,11 +102,13 @@ class Bookmarks extends StatelessWidget {
                   children: [
                     IconButton(
                       padding: EdgeInsets.zero,
+                      // To go to another page
                       onPressed: () async {
                         final result = await Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const AddIconPage(),
+                            builder: (context) =>
+                                const AddIconPage(), // Name of the page
                           ),
                         );
 

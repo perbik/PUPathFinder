@@ -3,7 +3,14 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
 class MapPage extends StatefulWidget {
-  const MapPage({Key? key}) : super(key: key);
+  final String origin;
+  final String destination;
+
+  const MapPage({
+    Key? key,
+    required this.origin,
+    required this.destination,
+  }) : super(key: key);
 
   @override
   State<MapPage> createState() => _MapPageState();
@@ -12,6 +19,13 @@ class MapPage extends StatefulWidget {
 class _MapPageState extends State<MapPage> {
   final TextEditingController _originController = TextEditingController();
   final TextEditingController _destinationController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _originController.text = widget.origin;
+    _destinationController.text = widget.destination;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +45,8 @@ class _MapPageState extends State<MapPage> {
             ),
             children: [
               TileLayer(
-                urlTemplate: 'https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=fQPbgxcnoUtKy0Dnu9FX',
+                urlTemplate:
+                    'https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=fQPbgxcnoUtKy0Dnu9FX',
                 userAgentPackageName: 'com.example.app',
               ),
             ],
@@ -110,22 +125,24 @@ class _MapPageState extends State<MapPage> {
                                     ),
                                     fillColor: Colors.transparent,
                                     filled: true,
-                                    contentPadding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
-                                    suffixIcon: _originController.text.isNotEmpty
-                                        ? SizedBox(
-                                      width: 24,
-                                      height: 24,
-                                      child: IconButton(
-                                        iconSize: 20,
-                                        icon: Icon(Icons.clear),
-                                        onPressed: () {
-                                          setState(() {
-                                            _originController.clear();
-                                          });
-                                        },
-                                      ),
-                                    )
-                                        : null,
+                                    contentPadding:
+                                        const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                    suffixIcon:
+                                        _originController.text.isNotEmpty
+                                            ? SizedBox(
+                                                width: 24,
+                                                height: 24,
+                                                child: IconButton(
+                                                  iconSize: 20,
+                                                  icon: Icon(Icons.clear),
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      _originController.clear();
+                                                    });
+                                                  },
+                                                ),
+                                              )
+                                            : null,
                                   ),
                                   style: const TextStyle(
                                     fontFamily: 'SanomatGrab',
@@ -138,7 +155,6 @@ class _MapPageState extends State<MapPage> {
                                   },
                                 ),
                               ),
-
                               Container(
                                 height: 50,
                                 child: TextField(
@@ -153,24 +169,26 @@ class _MapPageState extends State<MapPage> {
                                     ),
                                     fillColor: Colors.transparent,
                                     filled: true,
-                                    contentPadding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
-                                    suffixIcon: _destinationController.text.isNotEmpty
-                                        ? SizedBox(
-                                      width: 24,
-                                      height: 24,
-                                      child: IconButton(
-                                        iconSize: 20,
-                                        icon: Icon(Icons.clear),
-                                        onPressed: () {
-                                          setState(() {
-                                            _destinationController.clear();
-                                          });
-                                        },
-                                      ),
-                                    )
-                                        : null,
+                                    contentPadding:
+                                        const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                    suffixIcon:
+                                        _destinationController.text.isNotEmpty
+                                            ? SizedBox(
+                                                width: 24,
+                                                height: 24,
+                                                child: IconButton(
+                                                  iconSize: 20,
+                                                  icon: Icon(Icons.clear),
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      _destinationController
+                                                          .clear();
+                                                    });
+                                                  },
+                                                ),
+                                              )
+                                            : null,
                                   ),
-
                                   style: const TextStyle(
                                     fontFamily: 'SanomatGrab',
                                     fontWeight: FontWeight.w600,
@@ -195,6 +213,7 @@ class _MapPageState extends State<MapPage> {
                         foregroundColor: Colors.white,
                         minimumSize: const Size(double.infinity, 60),
                       ),
+                      // Function/Action for finding the shortest path
                       onPressed: () {},
                       child: const Text(
                         'Find Shortest Path',
@@ -214,4 +233,3 @@ class _MapPageState extends State<MapPage> {
     );
   }
 }
-

@@ -25,9 +25,10 @@ class AddIconPageState extends State<AddIconPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,  // Set the background color to white
+      backgroundColor: Colors.white, // Set the background color to white
       appBar: AppBar(
-        backgroundColor: const Color(0xFFfb5377), // Background color of the AppBar
+        backgroundColor:
+            const Color(0xFFfb5377), // Background color of the AppBar
         foregroundColor: Colors.white, // Color of the title and icons
         elevation: 0, // Remove shadow
         centerTitle: true, // Center the title
@@ -36,7 +37,8 @@ class AddIconPageState extends State<AddIconPage> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.of(context).pop(),
-          padding: const EdgeInsets.only(left: 16.0), // Adjust the padding for the back button
+          padding: const EdgeInsets.only(
+              left: 16.0), // Adjust the padding for the back button
         ),
         title: const Text(
           'Add Bookmark',
@@ -100,7 +102,8 @@ class AddIconPageState extends State<AddIconPage> {
                       selectedFacility = value;
                     });
                   },
-                  icon: const Icon(Icons.arrow_drop_down, color: Colors.blueAccent),
+                  icon: const Icon(Icons.arrow_drop_down,
+                      color: Colors.blueAccent),
                   dropdownColor: Colors.white.withOpacity(0.9),
                   style: const TextStyle(
                     fontFamily: 'SanomatGrab',
@@ -110,7 +113,6 @@ class AddIconPageState extends State<AddIconPage> {
                   isExpanded: true,
                   borderRadius: BorderRadius.circular(20),
                   menuMaxHeight: 600,
-
                 ),
               ),
               const SizedBox(height: 20),
@@ -125,14 +127,15 @@ class AddIconPageState extends State<AddIconPage> {
               ),
               const SizedBox(height: 20),
               FilledButton(
-
                 style: FilledButton.styleFrom(
                   backgroundColor: const Color(0xFFfb5377),
                   foregroundColor: Colors.white,
                   minimumSize: const Size(double.infinity, 60),
                 ),
                 onPressed: () {
-                  if (selectedIconPath != null && selectedFacility != null && labelController.text.isNotEmpty) {
+                  if (selectedIconPath != null &&
+                      selectedFacility != null &&
+                      labelController.text.isNotEmpty) {
                     Navigator.pop(context, {
                       'icon': selectedIconPath,
                       'facility': selectedFacility,

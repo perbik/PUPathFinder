@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../model/facilities_model.dart';
 import '../../model/facilities_list.dart';
+import '../map/map.dart';
 
 class Destination extends StatefulWidget {
   const Destination({super.key});
@@ -10,12 +11,15 @@ class Destination extends StatefulWidget {
 }
 
 class _DestinationState extends State<Destination> {
-
   List<FacilitiesModel> displayList = List.from(main_facilities_list);
 
   void updateList(String value) {
     setState(() {
-      displayList = main_facilities_list.where((element) => element.facility_name!.toLowerCase().contains(value.toLowerCase())).toList();
+      displayList = main_facilities_list
+          .where((element) => element.facility_name!
+              .toLowerCase()
+              .contains(value.toLowerCase()))
+          .toList();
     });
   }
 
@@ -37,7 +41,6 @@ class _DestinationState extends State<Destination> {
                 fontFamily: 'SanomatGrab',
                 fontWeight: FontWeight.w500,
                 fontSize: 16,
-
               ),
               decoration: InputDecoration(
                 filled: true,
@@ -77,37 +80,47 @@ class _DestinationState extends State<Destination> {
             itemBuilder: (context, index) {
               return Column(
                 children: [
-                  ListTile(
-                    contentPadding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
-                    leading: Image.asset(
-                      'assets/icons/LocationFill.png',
-                      width: 35,
-                      height: 35,
-                    ),
-                    title: Text(
-                      displayList[index].facility_name!,
-                      style: const TextStyle(
-                        color: Colors.black87,
-                        fontSize: 15,
-                        fontFamily: 'SanomatGrab',
-                        fontWeight: FontWeight.w500,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MapPage(
+                            origin: " ",
+                            destination: displayList[index].facility_name!,
+                          ),
+                        ),
+                      );
+                    },
+                    child: ListTile(
+                      contentPadding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
+                      leading: Image.asset('assets/icons/LocationFill.png',
+                          width: 35, height: 35),
+                      title: Text(
+                        displayList[index].facility_name!,
+                        style: const TextStyle(
+                          color: Colors.black87,
+                          fontSize: 15,
+                          fontFamily: 'SanomatGrab',
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      displayList[index].facility_desc!,
-                      style: const TextStyle(
-                        color: Color(0xFF545454),
-                        fontSize: 13,
-                        fontFamily: 'SanomatGrab',
+                      subtitle: Text(
+                        displayList[index].facility_desc!,
+                        style: const TextStyle(
+                          color: Color(0xFF545454),
+                          fontSize: 13,
+                          fontFamily: 'SanomatGrab',
+                        ),
                       ),
-                    ),
-                    trailing: Image.asset(
-                      'assets/icons/ArrowRight.png',
-                      width: 19,
-                      height: 19,
+                      trailing: Image.asset(
+                        'assets/icons/ArrowRight.png',
+                        width: 19,
+                        height: 19,
+                      ),
                     ),
                   ),
-                  if (index < main_facilities_list.length - 1)
+                  if (index < displayList.length - 1)
                     const Divider(
                       height: 1,
                       thickness: 0.5,
@@ -120,7 +133,6 @@ class _DestinationState extends State<Destination> {
             },
           ),
         ),
-
       ],
     );
   }

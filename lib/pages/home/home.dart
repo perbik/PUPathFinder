@@ -8,7 +8,7 @@ import 'package:pupathfinder/pages/home/pageBookmarks.dart';
 import 'package:pupathfinder/pages/home/sectionSearch.dart';
 import '../map/map.dart';
 import 'sectionTitle.dart';
-import '../../model/bookmark_icons_list.dart';  // Import the file that contains the icon list
+import '../../model/bookmark_icons_list.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -40,7 +40,8 @@ class _HomeState extends State<Home> {
 
   void _showBookmarkDetails(BuildContext context, int index) {
     final bookmark = bookmarks[index];
-    TextEditingController labelController = TextEditingController(text: bookmark['label']);
+    TextEditingController labelController =
+        TextEditingController(text: bookmark['label']);
     String? selectedIconPath = bookmark['icon'];
 
     showModalBottomSheet(
@@ -49,7 +50,8 @@ class _HomeState extends State<Home> {
       isScrollControlled: true,
       builder: (context) {
         return Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          padding:
+              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(30, 20, 30, 30),
@@ -233,7 +235,11 @@ class _HomeState extends State<Home> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const MapPage()),
+                    MaterialPageRoute(
+                        builder: (context) => const MapPage(
+                              destination: '',
+                              origin: '',
+                            )),
                   );
                 },
                 child: const Text(
