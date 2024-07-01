@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 import 'package:pupathfinder/pages/home/pageBookmarks.dart';
 import 'package:pupathfinder/pages/home/sectionSearch.dart';
 import '../map/map.dart';
@@ -71,7 +72,8 @@ class _HomeState extends State<Home> {
                     width: double.infinity,
                     height: 200,
                     color: Colors.grey[300],
-                    child: Placeholder(),
+                    //child: const Placeholder(
+                    // color: Color.fromARGB(255, 50, 153, 201)),
                   ),
                   const SizedBox(height: 30),
                   TextField(
