@@ -13,7 +13,8 @@ List<FacilitiesModel> main_facilities_list = [
   FacilitiesModel(
       "Charlie del Rosario Bldg.", "Some descriptions here blah blah"),
   FacilitiesModel("East Gate", "Some descriptions here blah blah"),
-  FacilitiesModel("Flagpole", "Some descriptions here blah blah"), // disable
+  FacilitiesModel("Flagpole", "Some descriptions here blah blah",
+      isAvailable: false), // disable
   FacilitiesModel("Grandstand", "Some descriptions here blah blah"),
   FacilitiesModel("Guard House", "Some descriptions here blah blah"),
   FacilitiesModel("Gymnasium", "Some descriptions here blah blah"),
@@ -23,22 +24,25 @@ List<FacilitiesModel> main_facilities_list = [
   FacilitiesModel("Main Building - Dome", "Some descriptions here blah blah"),
   FacilitiesModel(
       "Main Building - East Wing", "Some descriptions here blah blah"),
-  FacilitiesModel("Main Building - North Wing",
-      "Some descriptions here blah blah"), // disable
+  FacilitiesModel(
+      "Main Building - North Wing", "Some descriptions here blah blah",
+      isAvailable: false), // disable
   FacilitiesModel(
       "Main Building - South Wing", "Some descriptions here blah blah"),
   FacilitiesModel(
       "Main Building - West Wing", "Some descriptions here blah blah"),
   FacilitiesModel("Main Gate", "Some descriptions here blah blah"),
   FacilitiesModel(
-      "Nemesio E. Prudente Freedom Park", "Some descriptions here blah blah"),
+      "Nemesio E. Prudente Freedom Park", "Some descriptions here blah blah",
+      isAvailable: false),
   FacilitiesModel("Ninoy Aquino Library", "Some descriptions here blah blah"),
   FacilitiesModel(
       "Non-Food Stalls Building", "Some descriptions here blah blah"),
   FacilitiesModel("North Parking Area", "Some descriptions here blah blah"),
   FacilitiesModel("Nutrition and Food Science Building",
       "Some descriptions here blah blah"),
-  FacilitiesModel("Open Court", "Some descriptions here blah blah"), // disable
+  FacilitiesModel("Open Court", "Some descriptions here blah blah",
+      isAvailable: false), // disable
   FacilitiesModel("Open University/Nontraditional Studies Program",
       "Some descriptions here blah blah"), // check if accurate yung facility
   FacilitiesModel("Oval Openfield", "Some descriptions here blah blah"),
