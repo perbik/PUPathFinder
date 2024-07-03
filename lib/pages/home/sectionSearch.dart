@@ -78,45 +78,55 @@ class _DestinationState extends State<Destination> {
             padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
             itemCount: displayList.length,
             itemBuilder: (context, index) {
+              final facility = displayList[index];
               return Column(
                 children: [
                   GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => MapPage(
-                            origin: " ",
-                            destination: displayList[index].facility_name!,
+                    onTap: facility.isAvailable
+                        ? () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MapPage(
+                                  origin: " ",
+                                  destination:
+                                      displayList[index].facility_name!,
+                                ),
+                              ),
+                            );
+                          }
+                        : null,
+                    child: Opacity(
+                      opacity: facility.isAvailable ? 1.0 : 0.4,
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
+                        leading: Image.asset(
+                          'assets/icons/LocationFill.png',
+                          width: 35,
+                          height: 35,
+                        ),
+                        title: Text(
+                          displayList[index].facility_name!,
+                          style: const TextStyle(
+                            color: Colors.black87,
+                            fontSize: 15,
+                            fontFamily: 'SanomatGrab',
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
-                      );
-                    },
-                    child: ListTile(
-                      contentPadding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
-                      leading: Image.asset('assets/icons/LocationFill.png',
-                          width: 35, height: 35),
-                      title: Text(
-                        displayList[index].facility_name!,
-                        style: const TextStyle(
-                          color: Colors.black87,
-                          fontSize: 15,
-                          fontFamily: 'SanomatGrab',
-                          fontWeight: FontWeight.w500,
+                        subtitle: Text(
+                          displayList[index].facility_desc!,
+                          style: const TextStyle(
+                            color: Color(0xFF545454),
+                            fontSize: 13,
+                            fontFamily: 'SanomatGrab',
+                          ),
                         ),
-                      ),
-                      subtitle: Text(
-                        displayList[index].facility_desc!,
-                        style: const TextStyle(
-                          color: Color(0xFF545454),
-                          fontSize: 13,
-                          fontFamily: 'SanomatGrab',
+                        trailing: Image.asset(
+                          'assets/icons/ArrowRight.png',
+                          width: 19,
+                          height: 19,
                         ),
-                      ),
-                      trailing: Image.asset(
-                        'assets/icons/ArrowRight.png',
-                        width: 19,
-                        height: 19,
                       ),
                     ),
                   ),
