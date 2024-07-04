@@ -95,6 +95,8 @@ flutter:
     - assets/img/Obelisk.png
     - assets/img/Sampaguita-Bldg.png
     - assets/img/Southwing.png
+    - assets/img/Pool.png
+    - assets/img/Pylon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
