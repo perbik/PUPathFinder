@@ -72,8 +72,10 @@ class _HomeState extends State<Home> {
                     width: double.infinity,
                     height: 200,
                     color: Colors.grey[300],
-                    //child: const Placeholder(
-                    // color: Color.fromARGB(255, 50, 153, 201)),
+                    child: Image.asset(
+                      bookmark['facility'].imagePath,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   const SizedBox(height: 30),
                   TextField(

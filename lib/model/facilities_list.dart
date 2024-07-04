@@ -2,7 +2,7 @@ import 'facilities_model.dart';
 
 List<FacilitiesModel> main_facilities_list = [
   FacilitiesModel("Amphitheater", "Some descriptions here blah blah",
-      "assets/img/Amphiteater.png"),
+      "assets/img/Amphitheater.png"),
   FacilitiesModel("Banda Kawayan, Sining Lahi Headquarters",
       "Some descriptions here blah blah", "assets/img/Unavailable.png"),
   FacilitiesModel("Building and Grounds Maintenance Office",
