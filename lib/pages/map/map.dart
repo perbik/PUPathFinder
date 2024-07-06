@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
+import '../../model/facilities_model.dart';
+import '../../model/facilities_list.dart';
 
 class MapPage extends StatefulWidget {
   final String origin;
   final String destination;
+  final List<String>? facilityRooms;
 
   const MapPage({
     Key? key,
     required this.origin,
     required this.destination,
+    this.facilityRooms,
   }) : super(key: key);
 
   @override
@@ -25,6 +29,70 @@ class _MapPageState extends State<MapPage> {
     super.initState();
     _originController.text = widget.origin;
     _destinationController.text = widget.destination;
+  }
+
+  // those facilities that have rooms dont display the dialog
+  void _showRoomsDialog(BuildContext context) {
+    List<FacilitiesModel> facilitiesWithRooms = main_facilities_list
+        .where((facility) =>
+            facility.facility_name == widget.destination &&
+            facility.facility_rooms != null &&
+            facility.facility_rooms!.isNotEmpty)
+        .toList();
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Rooms in ${widget.destination}'),
+          content: SingleChildScrollView(
+            child: Container(
+              width: double.infinity,
+              constraints: const BoxConstraints(maxHeight: 400),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (facilitiesWithRooms.isNotEmpty)
+                    ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: facilitiesWithRooms.length,
+                      itemBuilder: (context, index) {
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                                facilitiesWithRooms[index].facility_name ?? ''),
+                            SizedBox(height: 4),
+                            Column(
+                              children:
+                                  (facilitiesWithRooms[index].facility_rooms ??
+                                          [])
+                                      .map((room) => Text(room))
+                                      .toList(),
+                            ),
+                            const Divider(),
+                          ],
+                        );
+                      },
+                    )
+                  else
+                    const Text('No rooms available'),
+                ],
+              ),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Close'),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -72,6 +140,30 @@ class _MapPageState extends State<MapPage> {
                   Navigator.pop(context);
                 },
                 icon: const Icon(Icons.arrow_back),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 50,
+            right: 30,
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 2,
+                    blurRadius: 20,
+                    offset: const Offset(0, 5),
+                  ),
+                ],
+              ),
+              child: IconButton(
+                onPressed: () {
+                  _showRoomsDialog(context);
+                },
+                icon: const Icon(Icons.info_outline),
               ),
             ),
           ),
@@ -213,7 +305,7 @@ class _MapPageState extends State<MapPage> {
                         foregroundColor: Colors.white,
                         minimumSize: const Size(double.infinity, 60),
                       ),
-                      // Function/Action for finding the shortest path
+                      // function for finding the shortest path
                       onPressed: () {},
                       child: const Text(
                         'Find Shortest Path',
