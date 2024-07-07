@@ -144,7 +144,7 @@ public class Main {
 		map.put(97, "West Wing - Stairs B");
 		map.put(98, "Charlie Del Rosario Hall");
 		map.put(99, "Charlie Del Rosario Hall - Entrance");
-		map.put(100, "");
+		map.put(100, "Track and Field Oval - Southwest");
 		
 	    
 	    // Adding all the vertices and its members along with weights
