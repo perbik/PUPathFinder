@@ -88,7 +88,7 @@ class _DestinationState extends State<Destination> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => MapPage(
-                                  origin: " ",
+                                  origin: "",
                                   destination:
                                       displayList[index].facility_name!,
                                 ),

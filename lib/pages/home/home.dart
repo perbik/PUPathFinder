@@ -68,13 +68,16 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  Container(
-                    width: double.infinity,
-                    height: 200,
-                    color: Colors.grey[300],
-                    child: Image.asset(
-                      bookmark['facility'].imagePath,
-                      fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: () {},                 // ...
+                    child: Container(
+                      width: double.infinity,
+                      height: 200,
+                      color: Colors.grey[300],
+                      child: Image.asset(
+                        bookmark['facility'].imagePath,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 30),
