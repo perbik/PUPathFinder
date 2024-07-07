@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';
-import 'package:latlong2/latlong.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../model/facilities_model.dart';
 import '../../model/facilities_list.dart';
 
@@ -105,19 +104,28 @@ class _MapPageState extends State<MapPage> {
             width: double.infinity,
             height: double.infinity,
           ),
-          FlutterMap(
-            options: MapOptions(
-              center: LatLng(14.59781, 121.01081),
-              zoom: 18.0,
-              maxZoom: 22.0,
+          GoogleMap(
+            initialCameraPosition: CameraPosition(
+              target: LatLng(14.59781, 121.01081),
+              zoom: 20.0,
             ),
-            children: [
-              TileLayer(
-                urlTemplate:
-                    'https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=fQPbgxcnoUtKy0Dnu9FX',
-                userAgentPackageName: 'com.example.app',
+            zoomControlsEnabled: true,
+            zoomGesturesEnabled: true,
+            onMapCreated: (GoogleMapController controller) {
+              // You can use the controller to interact with the map once it's initialized.
+            },
+            mapType: MapType.normal,
+            markers: Set<Marker>.from([
+              Marker(
+                markerId: MarkerId('marker_id'),
+                position: LatLng(14.59781, 121.01081),
+                infoWindow: InfoWindow(
+                  title: 'Your Location',
+                  snippet: 'This is the starting point',
+                ),
               ),
-            ],
+            ]),
+            myLocationEnabled: true,
           ),
           Positioned(
             top: 50,

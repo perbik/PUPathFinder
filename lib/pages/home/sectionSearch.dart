@@ -72,7 +72,7 @@ class _DestinationState extends State<Destination> {
         ),
         Container(
           margin: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-          height: 300,
+          height: 285,
           //color: Colors.grey,
           child: ListView.builder(
             padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
