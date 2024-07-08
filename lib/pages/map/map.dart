@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';
-import 'package:latlong2/latlong.dart';
+import 'package:pupathfinder/pages/map/map_content.dart';
 import '../../model/facilities_model.dart';
 import '../../model/facilities_list.dart';
 
@@ -35,9 +34,9 @@ class _MapPageState extends State<MapPage> {
   void _showRoomsDialog(BuildContext context) {
     List<FacilitiesModel> facilitiesWithRooms = main_facilities_list
         .where((facility) =>
-            facility.facility_name == widget.destination &&
-            facility.facility_rooms != null &&
-            facility.facility_rooms!.isNotEmpty)
+            facility.facilityName == widget.destination &&
+            facility.facilityRooms != null &&
+            facility.facilityRooms!.isNotEmpty)
         .toList();
 
     showDialog(
@@ -62,11 +61,11 @@ class _MapPageState extends State<MapPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                                facilitiesWithRooms[index].facility_name ?? ''),
-                            SizedBox(height: 4),
+                                facilitiesWithRooms[index].facilityName),
+                            const SizedBox(height: 4),
                             Column(
                               children:
-                                  (facilitiesWithRooms[index].facility_rooms ??
+                                  (facilitiesWithRooms[index].facilityRooms ??
                                           [])
                                       .map((room) => Text(room))
                                       .toList(),
@@ -105,19 +104,11 @@ class _MapPageState extends State<MapPage> {
             width: double.infinity,
             height: double.infinity,
           ),
-          FlutterMap(
-            options: MapOptions(
-              center: LatLng(14.59781, 121.01081),
-              zoom: 18.0,
-              maxZoom: 22.0,
+          Expanded(
+            child: Container(
+              color: Colors.grey,
+              child: MapsContent(),
             ),
-            children: [
-              TileLayer(
-                urlTemplate:
-                    'https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=fQPbgxcnoUtKy0Dnu9FX',
-                userAgentPackageName: 'com.example.app',
-              ),
-            ],
           ),
           Positioned(
             top: 50,

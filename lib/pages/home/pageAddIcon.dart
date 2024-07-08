@@ -94,7 +94,7 @@ class AddIconPageState extends State<AddIconPage> {
                   items: main_facilities_list.map((facility) {
                     return DropdownMenuItem(
                       value: facility,
-                      child: Text(facility.facility_name!),
+                      child: Text(facility.facilityName),
                     );
                   }).toList(),
                   onChanged: (value) {

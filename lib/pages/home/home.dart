@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
   void _showBookmarkDetails(BuildContext context, int index) {
     final bookmark = bookmarks[index];
     TextEditingController labelController =
-        TextEditingController(text: bookmark['label']);
+    TextEditingController(text: bookmark['label']);
     String? selectedIconPath = bookmark['icon'];
 
     showModalBottomSheet(
@@ -52,7 +52,7 @@ class _HomeState extends State<Home> {
       builder: (context) {
         return Padding(
           padding:
-              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(30, 20, 30, 30),
@@ -60,7 +60,7 @@ class _HomeState extends State<Home> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    bookmark['facility'].facility_name!,
+                    bookmark['facility'].facilityName!,
                     style: const TextStyle(
                       fontFamily: 'SanomatGrab',
                       fontWeight: FontWeight.bold,
@@ -68,13 +68,16 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  Container(
-                    width: double.infinity,
-                    height: 200,
-                    color: Colors.grey[300],
-                    child: Image.asset(
-                      bookmark['facility'].imagePath,
-                      fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: () {},                 // ...
+                    child: Container(
+                      width: double.infinity,
+                      height: 200,
+                      color: Colors.grey[300],
+                      child: Image.asset(
+                        bookmark['facility'].imagePath,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 30),
@@ -174,15 +177,9 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      body: Column(
         children: [
           Expanded(
-            child: Container(
-              width: double.infinity,
-              color: Colors.white,
-            ),
-          ),
-          SingleChildScrollView(
             child: Stack(
               children: [
                 SizedBox(
@@ -193,22 +190,24 @@ class _HomeState extends State<Home> {
                     alignment: Alignment.topCenter,
                   ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Align(
-                      alignment: Alignment.centerLeft,
-                      child: AppTitle(),
-                    ),
-                    const SizedBox(height: 23),
-                    const Destination(),
-                    const SizedBox(height: 35),
-                    Bookmarks(
-                      bookmarks: bookmarks,
-                      onAdd: _addBookmark,
-                      onEdit: _showBookmarkDetails,
-                    ),
-                  ],
+                SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: AppTitle(),
+                      ),
+                      const SizedBox(height: 23),
+                      const Destination(),
+                      const SizedBox(height: 35),
+                      Bookmarks(
+                        bookmarks: bookmarks,
+                        onAdd: _addBookmark,
+                        onEdit: _showBookmarkDetails,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -241,9 +240,9 @@ class _HomeState extends State<Home> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const MapPage(
-                              destination: '',
-                              origin: '',
-                            )),
+                          destination: '',
+                          origin: '',
+                        )),
                   );
                 },
                 child: const Text(
@@ -255,7 +254,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
