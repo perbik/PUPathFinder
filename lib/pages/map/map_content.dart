@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:location/location.dart';
 import '../../model/facilities_list.dart';
 import '../../model/facilities_model.dart';
 
@@ -8,16 +9,17 @@ class MapsContent extends StatefulWidget {
   final Function(String) updateDestination;
 
   const MapsContent({
-    super.key,
+    Key? key,
     required this.updateOrigin,
     required this.updateDestination,
-  });
+  }) : super(key: key);
 
   @override
   _MapsContentState createState() => _MapsContentState();
 }
 
 class _MapsContentState extends State<MapsContent> {
+  Location location = Location();
   late GoogleMapController _controller;
   final Set<Marker> _markers = {};
   final LatLngBounds _bounds = LatLngBounds(
@@ -25,7 +27,6 @@ class _MapsContentState extends State<MapsContent> {
     northeast: const LatLng(14.59881, 121.01181),
   );
 
-  // removes the system labels keme
   final String _mapStyle = '''
     [
       {
@@ -49,10 +50,13 @@ class _MapsContentState extends State<MapsContent> {
     ]
   ''';
 
+  LatLng? _currentPosition;
+
   @override
   void initState() {
     super.initState();
     _initializeMarkers();
+    _getCurrentLocation();
   }
 
   void _initializeMarkers() {
@@ -188,7 +192,7 @@ class _MapsContentState extends State<MapsContent> {
     return GoogleMap(
       initialCameraPosition: const CameraPosition(
         target: LatLng(14.59781, 121.01081),
-        zoom: 18.0,
+        zoom: 50.0,
       ),
       zoomControlsEnabled: true,
       zoomGesturesEnabled: true,
@@ -197,11 +201,22 @@ class _MapsContentState extends State<MapsContent> {
       onMapCreated: (GoogleMapController controller) {
         _controller = controller;
         _controller.animateCamera(CameraUpdate.newLatLngBounds(_bounds, 0));
-
-        // Apply the custom map style
         _controller.setMapStyle(_mapStyle);
       },
       mapType: MapType.normal,
+      myLocationEnabled: true,
+      myLocationButtonEnabled: false, // Remove the default location button
     );
+  }
+
+  void _getCurrentLocation() async {
+    try {
+      var locationData = await location.getLocation();
+      setState(() {
+        _currentPosition = LatLng(locationData.latitude!, locationData.longitude!);
+      });
+    } catch (e) {
+      print('Error getting current location: $e');
+    }
   }
 }

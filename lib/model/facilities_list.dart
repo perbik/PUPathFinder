@@ -262,7 +262,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Souvenir Shop",
     "Some descriptions here blah blah",
     "assets/img/Souvenir-Shop.png",
-    const LatLng(14.59850611932948, 121.01123519744411),
+    const LatLng(14.598460826736897, 121.01123436569785),
     isAvailable: true,
     facilityRooms: [],
   ), // gazebo
