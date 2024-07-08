@@ -1,15 +1,19 @@
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
 class FacilitiesModel {
-  String? facility_name;
-  String? facility_desc;
-  String? imagePath;
+  String facilityName;
+  String facilityDesc;
+  String imagePath;
+  LatLng coordinates;
   bool isAvailable;
-  List<String>? facility_rooms;
+  List<String> facilityRooms;
 
   FacilitiesModel(
-      this.facility_name,
-      this.facility_desc,
-      this.imagePath, {
+      this.facilityName,
+      this.facilityDesc,
+      this.imagePath,
+      this.coordinates, {
         this.isAvailable = true,
-        this.facility_rooms,
+        this.facilityRooms = const [],
       });
 }
