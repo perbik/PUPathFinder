@@ -1,56 +1,56 @@
-// dijkstra.dart
-
-import 'graph.dart';
 import 'package:collection/collection.dart';
+import 'graph.dart';
 
 class Graph {
-  final Map<String, List<Edge>> adjacencyList = {};
+  final Map<String, List<Edge>> adjList = {};
 
   Graph(List<Edge> edges) {
     for (var edge in edges) {
-      if (!adjacencyList.containsKey(edge.source)) {
-        adjacencyList[edge.source] = [];
-      }
-      adjacencyList[edge.source]!.add(edge);
+      adjList.putIfAbsent(edge.source, () => []).add(edge);
+      adjList.putIfAbsent(edge.destination, () => []).add(
+        Edge(edge.destination, edge.source, edge.weight),
+      );
     }
   }
 
-  List<String> dijkstra(String start, String goal) {
-    final Map<String, double> distances = {};
-    final Map<String, String?> previous = {};
-    final PriorityQueue<MapEntry<String, double>> queue = PriorityQueue<MapEntry<String, double>>(
-      (a, b) => a.value.compareTo(b.value),
+  List<String> dijkstra(String start, String end) {
+    final distances = <String, double>{};
+    final previous = <String, String?>{};
+    final priorityQueue = PriorityQueue<MapEntry<String, double>>(
+          (a, b) => a.value.compareTo(b.value),
     );
 
-    for (var node in adjacencyList.keys) {
+    adjList.keys.forEach((node) {
       distances[node] = double.infinity;
       previous[node] = null;
-      queue.add(MapEntry(node, double.infinity));
-    }
-
+    });
     distances[start] = 0;
-    queue.add(MapEntry(start, 0));
 
-    while (queue.isNotEmpty) {
-      final current = queue.removeFirst().key;
+    priorityQueue.add(MapEntry(start, 0));
 
-      if (current == goal) {
+    while (priorityQueue.isNotEmpty) {
+      final current = priorityQueue.removeFirst().key;
+
+      if (current == end) {
         final path = <String>[];
-        var step = goal;
-        while (previous[step] != null) {
-          path.add(step);
-          step = previous[step]!;
+        String? step = end;
+        while (step != null) {
+          path.insert(0, step);
+          step = previous[step];
         }
-        path.add(start);
-        return path.reversed.toList();
+        return path;
       }
 
-      for (var edge in adjacencyList[current]!) {
+      if (distances[current]! == double.infinity) {
+        break;
+      }
+
+      for (var edge in adjList[current]!) {
         final alt = distances[current]! + edge.weight;
         if (alt < distances[edge.destination]!) {
           distances[edge.destination] = alt;
           previous[edge.destination] = current;
-          queue.add(MapEntry(edge.destination, alt));
+          priorityQueue.add(MapEntry(edge.destination, alt));
         }
       }
     }

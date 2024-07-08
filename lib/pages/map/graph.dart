@@ -18,18 +18,18 @@ class Node {
 
 List<Edge> edges = [
   // Define your edges here
-  Edge("Ampitheater", "Amphitheater Entrance 1", 1.0),
-  Edge("Ampitheater", "Amphitheater Entrance 2", 1.0),
+  Edge("Amphitheater", "Amphitheater Entrance 1", 1.0),
+  Edge("Amphitheater", "Amphitheater Entrance 2", 1.0),
 
-  Edge("Ampitheater Entrance 1", "Amphitheater", 1.0),
-  Edge("Ampitheater Entrance 1", "Amphitheater Entrance 2", 17.2),
-  Edge("Ampitheater Entrance 1", "Lagoon Sidewalk - E", 38.0),
-  Edge("Ampitheater Entrance 1", "Lagoon Sidewalk - S", 21.0),
+  Edge("Amphitheater Entrance 1", "Amphitheater", 1.0),
+  Edge("Amphitheater Entrance 1", "Amphitheater Entrance 2", 17.2),
+  Edge("Amphitheater Entrance 1", "Lagoon Sidewalk - E", 38.0),
+  Edge("Amphitheater Entrance 1", "Lagoon Sidewalk - S", 21.0),
 
-  Edge("Ampitheater Entrance 2", "Amphitheater", 1.0),
-  Edge("Ampitheater Entrance 2", "Amphitheater Entrance 1", 17.2),
-  Edge("Ampitheater Entrance 2", "Food Stalls C", 9.5),
-  Edge("Ampitheater Entrance 2", "Lagoon", 34.3),
+  Edge("Amphitheater Entrance 2", "Amphitheater", 1.0),
+  Edge("Amphitheater Entrance 2", "Amphitheater Entrance 1", 17.2),
+  Edge("Amphitheater Entrance 2", "Food Stalls C", 9.5),
+  Edge("Amphitheater Entrance 2", "Lagoon", 34.3),
 
   Edge("Campus Development and Maintenance Building", "East Wing - Corner A", 8.0),
   Edge("Campus Development and Maintenance Building", "East Wing - Corner B", 34.7),
@@ -432,9 +432,9 @@ List<Edge> edges = [
 ];
 
 Map<String, Node> nodes = {
-  "Ampitheather": Node("Ampitheather", 14.597315774401595, 121.01042679308465),
-  "Ampitheater Entrance 1": Node("Ampitheater Entrance 1", 14.597411959689742, 121.01036387507604),
-  "Ampitheater Entrance 2": Node("Ampitheater Entrance 2", 14.597401156098861, 121.01052017046753),
+  "Amphitheater": Node("Amphitheater", 14.597315774401595, 121.01042679308465),
+  "Amphitheater Entrance 1": Node("Amphitheater Entrance 1", 14.597411959689742, 121.01036387507604),
+  "Amphitheater Entrance 2": Node("Amphitheater Entrance 2", 14.597401156098861, 121.01052017046753),
   "Campus Development and Maintenance Building": Node("Campus Development and Maintenance Building", 14.596330048069238, 121.01118273009989),
   "Canteen - Pathwalk L": Node("Canteen - Pathwalk L", 14.596914993951678, 121.00995399834156),
   "Canteen - Pathwalk R": Node("Canteen - Pathwalk R", 14.597055440902018, 121.00991572191914),
