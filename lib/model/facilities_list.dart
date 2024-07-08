@@ -122,6 +122,7 @@ List<FacilitiesModel> main_facilities_list = [
     isAvailable: true,
     facilityRooms: ['W101-W620'], // sample
   ),
+  /*
   FacilitiesModel(
     "Main Gate",
     "Some descriptions here blah blah",
@@ -130,6 +131,7 @@ List<FacilitiesModel> main_facilities_list = [
     isAvailable: true,
     facilityRooms: [],
   ),
+  */
   FacilitiesModel(
     "Nemesio E. Prudente Freedom Park",
     "Under construction",
@@ -183,6 +185,14 @@ List<FacilitiesModel> main_facilities_list = [
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
     const LatLng(14.59812960213433, 121.01204848293952),
+    isAvailable: true,
+    facilityRooms: [],
+  ),
+  FacilitiesModel(
+    "Track and Field Oval - North Entrance",
+    "Some descriptions here bla blah",
+    "assets/img/Unavailable.png",
+    const LatLng(14.598946038118019, 121.01189448997344),
     isAvailable: true,
     facilityRooms: [],
   ),
