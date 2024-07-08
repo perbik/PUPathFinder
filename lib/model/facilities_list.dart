@@ -4,7 +4,7 @@ import 'facilities_model.dart';
 List<FacilitiesModel> main_facilities_list = [
   FacilitiesModel(
     "Amphitheater",
-    "Located near at the lagoon and non-food stalls building",
+    "An area where students can gather, eat, and hold small gatherings such as meetings, jammings, etc.",
     "assets/img/Amphitheater.png",
     const LatLng(14.597315774401595, 121.01042679308465),
     isAvailable: true,
@@ -20,7 +20,7 @@ List<FacilitiesModel> main_facilities_list = [
   ), // same building as building and grounds maintenance office
   FacilitiesModel(
     "Charlie Del Rosario Hall",
-    "Some descriptions here blah blah",
+    "A Freedom Hall Building, established in honor of late Charlie Del Rosario, a former student leader in PUP, which serves a venue for various events and activities such as seminars, workshops, and other events",
     "assets/img/Charlie-Bldg.png",
     const LatLng(14.597109560457717, 121.00961913582897),
     isAvailable: true,
@@ -36,7 +36,7 @@ List<FacilitiesModel> main_facilities_list = [
   ), // disable
   FacilitiesModel(
     "Grandstand",
-    "Some descriptions here blah blah",
+    "A wide area where students can gather for events and activities such as flag ceremonies, concerts, and other events",
     "assets/img/Grandstand.png",
     const LatLng(14.598053558950635, 121.01150327191559),
     isAvailable: true,
@@ -44,7 +44,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Guard House",
-    "Some descriptions here blah blah",
+    "A security post where the security guards are stationed to monitor the entrance and exit of the campus",
     "assets/img/Unavailable.png",
     const LatLng(14.599069282242757, 121.0118275771096),
     isAvailable: true,
@@ -52,7 +52,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Interfaith Chapel",
-    "Some descriptions here blah blah",
+    "A sacred space designed to provide a welcoming environment for people of all faiths and beliefs to come together for prayer, reflection, and meditation, fostering spiritual growth, understanding, and respect for diversity.",
     "assets/img/Interfaith-Chapel.png",
     const LatLng(14.597179966885722, 121.01133285837156),
     isAvailable: true,
@@ -60,7 +60,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Laboratory High School",
-    "Some descriptions here blah blah",
+    "A high school building where the laboratory high school students are studying and having their classes",
     "assets/img/Unavailable.png",
     const LatLng(14.597435545725938, 121.00909547607279),
     isAvailable: true,
@@ -68,7 +68,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Lagoon",
-    "Some descriptions here blah blah",
+    "A wide area surrounding a lagoon where students can hang out and eat because most food stalls are located here",
     "assets/img/Unavailable.png",
     const LatLng(14.59773344800478, 121.0105642196839),
     isAvailable: true,
@@ -76,7 +76,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Dome",
-    "Some descriptions here blah blah",
+    "The circular offices at the center of the main building where faculty of some colleges are staying",
     "assets/img/Unavailable.png",
     const LatLng(14.597002075341843, 121.0107718566613),
     isAvailable: true,
@@ -84,7 +84,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "East Wing",
-    "Some descriptions here blah blah",
+    "The east wing of the main building",
     "assets/img/Main-East.png",
     const LatLng(14.596726938008107, 121.01105080639991),
     isAvailable: true,
@@ -100,7 +100,7 @@ List<FacilitiesModel> main_facilities_list = [
   ), // disable
   FacilitiesModel(
     "South Wing",
-    "Some descriptions here blah blah",
+    "The south wing of the main building",
     "assets/img/Southwing.png",
     const LatLng(14.596527073881502, 121.01065920390326),
     isAvailable: true,
@@ -116,7 +116,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "West Wing",
-    "Some descriptions here blah blah",
+    "The west wing of the main building",
     "assets/img/Main-West.png",
     const LatLng(14.596885271797717, 121.01042853393947),
     isAvailable: true,
@@ -142,7 +142,7 @@ List<FacilitiesModel> main_facilities_list = [
   ), // disable
   FacilitiesModel(
     "Ninoy Aquino Library and Learning Resources Center",
-    "Some descriptions here blah blah",
+    "A studying area and arena of books available for students",
     "assets/img/Unavailable.png",
     const LatLng(14.597887499712517, 121.00975740230176),
     isAvailable: true,
@@ -150,7 +150,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Non-Food Stalls Building",
-    "Some descriptions here blah blah",
+    "An area where students can buy school supplies, photocopying services, and other services",
     "assets/img/Unavailable.png",
     const LatLng(14.597401122747984, 121.01007603247875),
     isAvailable: true,
@@ -158,7 +158,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "North Parking Area",
-    "Some descriptions here blah blah",
+    "A parking area for students, faculty, staff, and visitors",
     "assets/img/Unavailable.png",
     const LatLng(14.598430772341226, 121.01025241703353),
     isAvailable: true,
@@ -166,7 +166,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Nutrition and Food Science Building",
-    "Some descriptions here blah blah",
+    "A building where students of Nutrition and Food Science are studying and having their classes",
     "assets/img/Nutrition.png",
     const LatLng(14.596837658278444, 121.01165970026874),
     isAvailable: true,
@@ -182,7 +182,7 @@ List<FacilitiesModel> main_facilities_list = [
   ), // disable
   FacilitiesModel(
     "Track and Field Oval",
-    "Some descriptions here blah blah",
+    "A big grass area that can serve as softball, soccer, football, and running fields for students",
     "assets/img/Unavailable.png",
     const LatLng(14.59812960213433, 121.01204848293952),
     isAvailable: true,
@@ -190,7 +190,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Track and Field Oval - North Entrance",
-    "Some descriptions here bla blah",
+    "An entrance of the track and field oval near the guard house",
     "assets/img/Unavailable.png",
     const LatLng(14.598946038118019, 121.01189448997344),
     isAvailable: true,
@@ -198,7 +198,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Physical Education Building",
-    "Some descriptions here blah blah",
+    "A building where PE students are conducting classes and faculty of College of Human Kinetics are staying",
     "assets/img/Unavailable.png",
     const LatLng(14.598354211639286, 121.01013347295763),
     isAvailable: true,
@@ -206,7 +206,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Printing Press Building",
-    "Some descriptions here blah blah",
+    "A building for university printing services",
     "assets/img/Unavailable.png",
     const LatLng(14.597304092612367, 121.00872615883056),
     isAvailable: true,
@@ -214,7 +214,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Property and Supply Building",
-    "Some descriptions here blah blah",
+    "A building for university property and supply services",
     "assets/img/Unavailable.png",
     const LatLng(14.59748248427277, 121.00864482143245),
     isAvailable: true,
@@ -222,7 +222,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Gymnasium and Sports Center",
-    "Some descriptions here blah blah",
+    "A hall where students train physically and a training ground for the student athletes that participate in the intercollegiate sports program",
     "assets/img/Gymnasium.png",
     const LatLng(14.599212399115132, 121.01081100593235),
     isAvailable: true,
@@ -230,7 +230,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Linear Park",
-    "Some descriptions here blah blah",
+    "A straight path park near the Pasig River where students can hang out and eat",
     "assets/img/Linear Park.png",
     const LatLng(14.596885051943044, 121.0094992503434),
     isAvailable: true,
@@ -238,7 +238,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Mabini Monument PUP Obelisk",
-    "Mabini Monument is located here",
+    "A monument of the Philippine hero Apolinario Mabini and the PUP Obelisk that symbolizes the university's mission and vision",
     "assets/img/Obelisk.png",
     const LatLng(14.598197971986368, 121.01075044155681),
     isAvailable: true,
@@ -246,7 +246,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "PUP Sta Mesa Ferry Station",
-    "Some descriptions here blah blah",
+    "A ferry station where people can ride a ferry boat to cross the Pasig River",
     "assets/img/Unavailable.png",
     const LatLng(14.596151031940266, 121.01083796544616),
     isAvailable: true,
@@ -254,7 +254,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Pylon",
-    "Some descriptions here blah blah",
+    "The entrance of the campus where the three-block rectangular structure is located.",
     "assets/img/Pylon.png",
     const LatLng(14.599168446580144, 121.01179401369039),
     isAvailable: true,
@@ -262,7 +262,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "R.C. Overhead Water Tank",
-    "Some descriptions here blah blah",
+    "A water tank that supplies water to the campus",
     "assets/img/Unavailable.png",
     const LatLng(14.597694229595374, 121.00933741907846),
     isAvailable: true,
@@ -270,7 +270,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Souvenir Shop",
-    "Some descriptions here blah blah",
+    "A shop where PUPians can buy campus merchandises such as shirts, lanyards, mugs, etc.",
     "assets/img/Souvenir-Shop.png",
     const LatLng(14.598460826736897, 121.01123436569785),
     isAvailable: true,
@@ -278,7 +278,7 @@ List<FacilitiesModel> main_facilities_list = [
   ), // gazebo
   FacilitiesModel(
     "Student Canteen",
-    "Some descriptions here blah blah",
+    "An eating area near the Linear Park",
     "assets/img/Student-Canteen.png",
     const LatLng(14.5969542080325, 121.00980350685204),
     isAvailable: true,
@@ -286,7 +286,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Swimming Pool",
-    "Some descriptions here blah blah",
+    "An olympic-sized swimming pool that is capable of handling several swimming classes and student athlete activities simultaneously",
     "assets/img/Pool.png",
     const LatLng(14.59882074982841, 121.01030768996343),
     isAvailable: true,
@@ -294,7 +294,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Tahanan ng Alumni",
-    "Some descriptions here blah blah",
+    "A building where alumni can stay and have their meetings and gatherings",
     "assets/img/Unavailable.png",
     const LatLng(14.598511651410037, 121.01011642902255),
     isAvailable: true,
@@ -302,7 +302,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Tahanan ng Atleta",
-    "Some descriptions here blah blah",
+    "A building where student athletes can stay and have their meetings and gatherings",
     "assets/img/Atleta.png",
     const LatLng(14.5982492517254, 121.01258625022864),
     isAvailable: true,
@@ -310,7 +310,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Tennis Court",
-    "Some descriptions here blah blah",
+    "A court where students can play tennis",
     "assets/img/Tennis-Court.png",
     const LatLng(14.598635292281834, 121.01085427985609),
     isAvailable: true,
@@ -318,7 +318,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Visitors Information Center",
-    "Some descriptions here blah blah",
+    "A center where visitors can ask for directions and information about the university",
     "assets/img/Visitors-Infor-Center.png",
     const LatLng(14.599089989173187, 121.01156921461765),
     isAvailable: true,
