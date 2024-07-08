@@ -454,7 +454,7 @@ Map<String, Node> nodes = {
   "Engineering Science Research Center (ESRC) Building": Node("Engineering Science Research Center (ESRC) Building", 14.599530073486369, 121.01116898805368),
   "Food Stalls A": Node("Food Stalls A", 14.598068999886816, 121.0104655430922),
   "Food Stalls B": Node("Food Stalls B", 14.597682252014906, 121.01070291857448),
-  "Food Stalls C": Node("Food Stalls C", 14.597314970691853, 121.01063049893509,
+  "Food Stalls C": Node("Food Stalls C", 14.597314970691853, 121.01063049893509),
   "Grandstand": Node("Grandstand", 14.598053558950635, 121.01150327191559),
   "Guard House": Node("Guard House", 14.599069282242757, 121.0118275771096),
   "Gymnasium - Entrance": Node("Gymnasium - Entrance", 14.599397831387405, 121.0110274525707),

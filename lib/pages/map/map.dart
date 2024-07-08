@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:pupathfinder/pages/map/map_content.dart';
 import '../../model/facilities_model.dart';
 import '../../model/facilities_list.dart';
+import 'dijkstra.dart';
+import 'graph.dart';
+
 
 class MapPage extends StatefulWidget {
   final String origin;
@@ -22,6 +26,7 @@ class MapPage extends StatefulWidget {
 class _MapPageState extends State<MapPage> {
   final TextEditingController _originController = TextEditingController();
   final TextEditingController _destinationController = TextEditingController();
+  List<LatLng> polylineCoordinates = []; // Store the polyline coordinates
 
   @override
   void initState() {
@@ -42,13 +47,41 @@ class _MapPageState extends State<MapPage> {
     });
   }
 
-  // those facilities that have rooms dont display the dialog
+  void _findShortestPath() {
+    if (_originController.text.isEmpty || _destinationController.text.isEmpty) {
+      // error pop up when incomplete input
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please select both origin and destination')),
+      );
+      return;
+    }
+
+    // Call dijkstra.dart
+    Graph graph = Graph(edges);
+    List<String> path = graph.dijkstra(_originController.text, _destinationController.text);
+
+    if (path.isNotEmpty) {
+      // generates polylines
+      setState(() {
+        polylineCoordinates = path.map((node) {
+          Node? n = nodes[node];
+          return LatLng(n!.lat, n.lon);
+        }).toList();
+      });
+    } else {
+      // shows message if no path
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('No path found between selected points')),
+      );
+    }
+  }
+
   void _showRoomsDialog(BuildContext context) {
     List<FacilitiesModel> facilitiesWithRooms = main_facilities_list
         .where((facility) =>
-            facility.facilityName == widget.destination &&
-            facility.facilityRooms != null &&
-            facility.facilityRooms!.isNotEmpty)
+    facility.facilityName == widget.destination &&
+        facility.facilityRooms != null &&
+        facility.facilityRooms!.isNotEmpty)
         .toList();
 
     showDialog(
@@ -77,10 +110,10 @@ class _MapPageState extends State<MapPage> {
                             const SizedBox(height: 4),
                             Column(
                               children:
-                                  (facilitiesWithRooms[index].facilityRooms ??
-                                          [])
-                                      .map((room) => Text(room))
-                                      .toList(),
+                              (facilitiesWithRooms[index].facilityRooms ??
+                                  [])
+                                  .map((room) => Text(room))
+                                  .toList(),
                             ),
                             const Divider(),
                           ],
@@ -122,6 +155,7 @@ class _MapPageState extends State<MapPage> {
               child: MapsContent(
                 updateOrigin: _updateOrigin,
                 updateDestination: _updateDestination,
+                polylineCoordinates: polylineCoordinates, // Pass polyline coordinates
               ),
             ),
           ),
@@ -211,7 +245,6 @@ class _MapPageState extends State<MapPage> {
                             children: [
                               Container(
                                 height: 50,
-                                //color: Colors.grey,
                                 child: TextField(
                                   controller: _originController,
                                   decoration: InputDecoration(
@@ -225,23 +258,23 @@ class _MapPageState extends State<MapPage> {
                                     fillColor: Colors.transparent,
                                     filled: true,
                                     contentPadding:
-                                        const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                    const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                     suffixIcon:
-                                        _originController.text.isNotEmpty
-                                            ? SizedBox(
-                                                width: 24,
-                                                height: 24,
-                                                child: IconButton(
-                                                  iconSize: 20,
-                                                  icon: Icon(Icons.clear),
-                                                  onPressed: () {
-                                                    setState(() {
-                                                      _originController.clear();
-                                                    });
-                                                  },
-                                                ),
-                                              )
-                                            : null,
+                                    _originController.text.isNotEmpty
+                                        ? SizedBox(
+                                      width: 24,
+                                      height: 24,
+                                      child: IconButton(
+                                        iconSize: 20,
+                                        icon: Icon(Icons.clear),
+                                        onPressed: () {
+                                          setState(() {
+                                            _originController.clear();
+                                          });
+                                        },
+                                      ),
+                                    )
+                                        : null,
                                   ),
                                   style: const TextStyle(
                                     fontFamily: 'SanomatGrab',
@@ -270,24 +303,24 @@ class _MapPageState extends State<MapPage> {
                                     fillColor: Colors.transparent,
                                     filled: true,
                                     contentPadding:
-                                        const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                    const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                     suffixIcon:
-                                        _destinationController.text.isNotEmpty
-                                            ? SizedBox(
-                                                width: 24,
-                                                height: 24,
-                                                child: IconButton(
-                                                  iconSize: 20,
-                                                  icon: Icon(Icons.clear),
-                                                  onPressed: () {
-                                                    setState(() {
-                                                      _destinationController
-                                                          .clear();
-                                                    });
-                                                  },
-                                                ),
-                                              )
-                                            : null,
+                                    _destinationController.text.isNotEmpty
+                                        ? SizedBox(
+                                      width: 24,
+                                      height: 24,
+                                      child: IconButton(
+                                        iconSize: 20,
+                                        icon: Icon(Icons.clear),
+                                        onPressed: () {
+                                          setState(() {
+                                            _destinationController
+                                                .clear();
+                                          });
+                                        },
+                                      ),
+                                    )
+                                        : null,
                                   ),
                                   style: const TextStyle(
                                     fontFamily: 'SanomatGrab',
@@ -300,27 +333,31 @@ class _MapPageState extends State<MapPage> {
                                   },
                                 ),
                               ),
-                              const SizedBox(height: 20),
                             ],
                           ),
                         ),
-                        const SizedBox(width: 10),
                       ],
                     ),
                     const SizedBox(height: 20),
-                    FilledButton(
-                      style: FilledButton.styleFrom(
-                        backgroundColor: const Color(0xFFfb5377),
-                        foregroundColor: Colors.white,
-                        minimumSize: const Size(double.infinity, 60),
-                      ),
-                      // function for finding the shortest path
-                      onPressed: () {},
-                      child: const Text(
-                        'Find Shortest Path',
-                        style: TextStyle(
-                          fontFamily: 'SanomatGrab',
-                          fontSize: 16,
+                    SizedBox(
+                      width: double.infinity,
+                      height: 60,
+                      child: FilledButton(
+                        onPressed: _findShortestPath, // Call the method here
+                        style: FilledButton.styleFrom(
+                          backgroundColor: const Color(0xFFfb5377),
+                          foregroundColor: Colors.white,
+                          minimumSize: const Size(double.infinity, 60),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25.0),
+                          ),
+                        ),
+                        child: const Text(
+                          'Find Shortest Path',
+                          style: TextStyle(
+                            fontFamily: 'SanomatGrab',
+                            fontSize: 16,
+                          ),
                         ),
                       ),
                     ),

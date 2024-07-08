@@ -7,11 +7,13 @@ import '../../model/facilities_model.dart';
 class MapsContent extends StatefulWidget {
   final Function(String) updateOrigin;
   final Function(String) updateDestination;
+  final List<LatLng> polylineCoordinates; // Receive polyline coordinates
 
   const MapsContent({
     Key? key,
     required this.updateOrigin,
     required this.updateDestination,
+    required this.polylineCoordinates, // Receive polyline coordinates
   }) : super(key: key);
 
   @override
@@ -198,6 +200,14 @@ class _MapsContentState extends State<MapsContent> {
       zoomGesturesEnabled: true,
       markers: _markers,
       compassEnabled: false,
+      polylines: {
+        Polyline(
+          polylineId: PolylineId('path'),
+          points: widget.polylineCoordinates,
+          color: Colors.blue,
+          width: 5,
+        ),
+      },
       onMapCreated: (GoogleMapController controller) {
         _controller = controller;
         _controller.animateCamera(CameraUpdate.newLatLngBounds(_bounds, 0));
