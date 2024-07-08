@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pupathfinder/pages/home/home.dart';
-import 'package:pupathfinder/pages/map_trial.dart';
-
-// test commit 02
 
 void main() {
   runApp(const MyApp());

@@ -6,7 +6,7 @@ class FacilitiesModel {
   String imagePath;
   LatLng coordinates;
   bool isAvailable;
-  List<String> facilityRooms;
+  List<String> ? facilityRooms;
 
   FacilitiesModel(
       this.facilityName,
@@ -14,6 +14,6 @@ class FacilitiesModel {
       this.imagePath,
       this.coordinates, {
         this.isAvailable = true,
-        this.facilityRooms = const [],
+        this.facilityRooms,
       });
 }

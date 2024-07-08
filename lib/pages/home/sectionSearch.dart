@@ -16,7 +16,7 @@ class _DestinationState extends State<Destination> {
   void updateList(String value) {
     setState(() {
       displayList = main_facilities_list
-          .where((element) => element.facility_name!
+          .where((element) => element.facilityName
               .toLowerCase()
               .contains(value.toLowerCase()))
           .toList();
@@ -90,7 +90,7 @@ class _DestinationState extends State<Destination> {
                                 builder: (context) => MapPage(
                                   origin: "",
                                   destination:
-                                      displayList[index].facility_name!,
+                                      displayList[index].facilityName,
                                 ),
                               ),
                             );
@@ -106,7 +106,7 @@ class _DestinationState extends State<Destination> {
                           height: 35,
                         ),
                         title: Text(
-                          displayList[index].facility_name!,
+                          displayList[index].facilityName,
                           style: const TextStyle(
                             color: Colors.black87,
                             fontSize: 15,
@@ -115,7 +115,7 @@ class _DestinationState extends State<Destination> {
                           ),
                         ),
                         subtitle: Text(
-                          displayList[index].facility_desc!,
+                          displayList[index].facilityDesc,
                           style: const TextStyle(
                             color: Color(0xFF545454),
                             fontSize: 13,

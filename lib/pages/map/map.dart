@@ -34,9 +34,9 @@ class _MapPageState extends State<MapPage> {
   void _showRoomsDialog(BuildContext context) {
     List<FacilitiesModel> facilitiesWithRooms = main_facilities_list
         .where((facility) =>
-            facility.facility_name == widget.destination &&
-            facility.facility_rooms != null &&
-            facility.facility_rooms!.isNotEmpty)
+            facility.facilityName == widget.destination &&
+            facility.facilityRooms != null &&
+            facility.facilityRooms!.isNotEmpty)
         .toList();
 
     showDialog(
@@ -61,11 +61,11 @@ class _MapPageState extends State<MapPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                                facilitiesWithRooms[index].facility_name ?? ''),
-                            SizedBox(height: 4),
+                                facilitiesWithRooms[index].facilityName),
+                            const SizedBox(height: 4),
                             Column(
                               children:
-                                  (facilitiesWithRooms[index].facility_rooms ??
+                                  (facilitiesWithRooms[index].facilityRooms ??
                                           [])
                                       .map((room) => Text(room))
                                       .toList(),
