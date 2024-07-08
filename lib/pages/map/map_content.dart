@@ -193,6 +193,7 @@ class _MapsContentState extends State<MapsContent> {
       zoomControlsEnabled: true,
       zoomGesturesEnabled: true,
       markers: _markers,
+      compassEnabled: false,
       onMapCreated: (GoogleMapController controller) {
         _controller = controller;
         _controller.animateCamera(CameraUpdate.newLatLngBounds(_bounds, 0));

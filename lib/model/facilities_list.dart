@@ -6,23 +6,15 @@ List<FacilitiesModel> main_facilities_list = [
     "Amphitheater",
     "Located near at the lagoon and non-food stalls building",
     "assets/img/Amphitheater.png",
-    const LatLng(14.597349043021618, 121.01033935232498),
+    const LatLng(14.597315774401595, 121.01042679308465),
     isAvailable: true,
     facilityRooms: [],
   ),
   FacilitiesModel(
-    "Banda Kawayan, Sining Lahi Headquarters",
-    "Under construction",
-    "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
-    isAvailable: false,
-    facilityRooms: [],
-  ), // disable
-  FacilitiesModel(
     "Campus Development and Maintenance Building",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.596330048069238, 121.01118273009989),
     isAvailable: true,
     facilityRooms: [],
   ), // same building as building and grounds maintenance office
@@ -30,7 +22,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Charlie del Rosario Bldg.",
     "Some descriptions here blah blah",
     "assets/img/Charlie-Bldg.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597109560457717, 121.00961913582897),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -38,7 +30,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Flagpole",
     "Under construction",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597758807469413, 121.01099490159332),
     isAvailable: false,
     facilityRooms: [],
   ), // disable
@@ -46,7 +38,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Grandstand",
     "Some descriptions here blah blah",
     "assets/img/Grandstand.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.598053558950635, 121.01150327191559),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -54,7 +46,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Guard House",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.599069282242757, 121.0118275771096),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -70,7 +62,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Laboratory High School",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597435545725938, 121.00909547607279),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -78,7 +70,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Lagoon",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.597732493280542, 121.01045090579692),
+    const LatLng(14.59773344800478, 121.0105642196839),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -86,7 +78,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Main Building - Dome",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597002075341843, 121.0107718566613),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -94,7 +86,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Main Building - East Wing",
     "Some descriptions here blah blah",
     "assets/img/Main-East.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.596726938008107, 121.01105080639991),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -102,7 +94,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Main Building - North Wing",
     "Under construction",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597323933668806, 121.01087646282261),
     isAvailable: false,
     facilityRooms: [],
   ), // disable
@@ -110,7 +102,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Main Building - South Wing",
     "Some descriptions here blah blah",
     "assets/img/Southwing.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.596527073881502, 121.01065920390326),
     isAvailable: true,
     facilityRooms: [
       'Accounting Office',
@@ -126,7 +118,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Main Building - West Wing",
     "Some descriptions here blah blah",
     "assets/img/Main-West.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.596885271797717, 121.01042853393947),
     isAvailable: true,
     facilityRooms: ['W101-W620'], // sample
   ),
@@ -134,7 +126,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Main Gate",
     "Some descriptions here blah blah",
     "assets/img/Main-Gate.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.5991275421742, 121.01176614564403),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -142,7 +134,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Nemesio E. Prudente Freedom Park",
     "Under construction",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597878105937333, 121.01095795526388),
     isAvailable: false,
     facilityRooms: [],
   ), // disable
@@ -150,7 +142,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Ninoy Aquino Library",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597887499712517, 121.00975740230176),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -158,7 +150,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Non-Food Stalls Building",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597401122747984, 121.01007603247875),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -166,7 +158,7 @@ List<FacilitiesModel> main_facilities_list = [
     "North Parking Area",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.598430772341226, 121.01025241703353),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -174,7 +166,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Nutrition and Food Science Building",
     "Some descriptions here blah blah",
     "assets/img/Nutrition.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.596837658278444, 121.01165970026874),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -182,7 +174,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Open Court",
     "Under construction",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.598887613065498, 121.0111305245991),
     isAvailable: false,
     facilityRooms: [],
   ), // disable
@@ -190,7 +182,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Oval Openfield",
     "Track and Field Oval",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.59812960213433, 121.01204848293952),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -198,7 +190,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Physical Education Building",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.598354211639286, 121.01013347295763),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -206,7 +198,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Printing Press Building",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597304092612367, 121.00872615883056),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -214,7 +206,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Property and Supply Building",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.59748248427277, 121.00864482143245),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -222,7 +214,7 @@ List<FacilitiesModel> main_facilities_list = [
     "PUP Gymnasium",
     "Some descriptions here blah blah",
     "assets/img/Gymnasium.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.599212399115132, 121.01081100593235),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -230,7 +222,7 @@ List<FacilitiesModel> main_facilities_list = [
     "PUP Linear Park",
     "Some descriptions here blah blah",
     "assets/img/Linear Park.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.596885051943044, 121.0094992503434),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -238,7 +230,7 @@ List<FacilitiesModel> main_facilities_list = [
     "PUP Obelisk",
     "Mabini Monument is located here",
     "assets/img/Obelisk.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.598197971986368, 121.01075044155681),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -246,7 +238,7 @@ List<FacilitiesModel> main_facilities_list = [
     "PUP Sta. Mesa Ferry Station",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.596151031940266, 121.01083796544616),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -254,7 +246,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Pylon",
     "Some descriptions here blah blah",
     "assets/img/Pylon.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.599168446580144, 121.01179401369039),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -262,7 +254,7 @@ List<FacilitiesModel> main_facilities_list = [
     "R.C. Overhead Water Tank",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597694229595374, 121.00933741907846),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -270,7 +262,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Souvenir Shop",
     "Some descriptions here blah blah",
     "assets/img/Souvenir-Shop.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.59850611932948, 121.01123519744411),
     isAvailable: true,
     facilityRooms: [],
   ), // gazebo
@@ -278,7 +270,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Student Canteen",
     "Some descriptions here blah blah",
     "assets/img/Student-Canteen.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.5969542080325, 121.00980350685204),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -286,7 +278,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Swimming Pool",
     "Some descriptions here blah blah",
     "assets/img/Pool.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.59882074982841, 121.01030768996343),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -294,7 +286,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Tahanan ng Alumni",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.598511651410037, 121.01011642902255),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -302,7 +294,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Tahanan ng Atleta",
     "Some descriptions here blah blah",
     "assets/img/Atleta.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.5982492517254, 121.01258625022864),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -310,7 +302,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Tennis Court",
     "Some descriptions here blah blah",
     "assets/img/Tennis-Court.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.598635292281834, 121.01085427985609),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -318,7 +310,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Visitors Information Center",
     "Some descriptions here blah blah",
     "assets/img/Visitors-Infor-Center.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.599089989173187, 121.01156921461765),
     isAvailable: true,
     facilityRooms: [],
   ),
