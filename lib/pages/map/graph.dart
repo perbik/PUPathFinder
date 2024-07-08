@@ -35,11 +35,11 @@ List<Edge> edges = [
   Edge("Campus Development and Maintenance Building", "East Wing - Corner B", 34.7),
   Edge("Campus Development and Maintenance Building", "PUP Sta Mesa Ferry Station", 34.0),
 
-  Edge("Canteen - Pathwalk L", "Linear Park - Dining and Meeting Area", 31.3),
+  Edge("Canteen - Pathwalk L", "Linear Park", 31.3),
   Edge("Canteen - Pathwalk L", "Student Canteen - Front", 4.7),
   Edge("Canteen - Pathwalk L", "West Wing - Corner A", 14.2),
 
-  Edge("Canteen - Pathwalk R", "Linear Park - Dining and Meeting Area", 31.3),
+  Edge("Canteen - Pathwalk R", "Linear Park", 31.3),
   Edge("Canteen - Pathwalk R", "Student Canteen - Front", 4.7),
   Edge("Canteen - Pathwalk R", "Charlie Del Rosario Hall - Entrance", 15.0),
 
@@ -193,16 +193,16 @@ List<Edge> edges = [
   Edge("Lagoon Sidewalk - W", "Lagoon Sidewalk - N", 57.0),
   Edge("Lagoon Sidewalk - W", "Non-Food Stalls Building - Rear Entrance", 26.2),
 
-  Edge("Linear Park - Dining and Meeting Area", "Canteen - Pathwalk L", 31.3),
-  Edge("Linear Park - Dining and Meeting Area", "Canteen - Pathwalk R", 31.1),
-  Edge("Linear Park - Dining and Meeting Area", "Linear Park Sidewalk - SC", 25.3),
-  Edge("Linear Park - Dining and Meeting Area", "Student Canteen", 10.3),
+  Edge("Linear Park", "Canteen - Pathwalk L", 31.3),
+  Edge("Linear Park", "Canteen - Pathwalk R", 31.1),
+  Edge("Linear Park", "Linear Park Sidewalk - SC", 25.3),
+  Edge("Linear Park", "Student Canteen", 10.3),
 
   Edge("Linear Park Sidewalk - LHS", "Laboratory High School - Backside B", 36.7),
   Edge("Linear Park Sidewalk - LHS", "Linear Park Sidewalk - SC", 56.2),
   Edge("Linear Park Sidewalk - LHS", "Printing Press Building", 32.4),
 
-  Edge("Linear Park Sidewalk - SC", "Linear Park - Dining and Meeting Area", 25.3),
+  Edge("Linear Park Sidewalk - SC", "Linear Park", 25.3),
   Edge("Linear Park Sidewalk - SC", "Linear Park Sidewalk - LHS", 56.2),
   Edge("Linear Park Sidewalk - SC", "Linear Park Sidewalk - SW", 64.2),
 
@@ -309,7 +309,7 @@ List<Edge> edges = [
   Edge("PUP Sta Mesa Ferry Station", "Campus Development and Maintenance Building", 34.0),
   Edge("PUP Sta Mesa Ferry Station", "Linear Park Sidewalk - SW", 89.5),
 
-  Edge("PUP Tahanan ng Atleta", "Track and Field Oval - East", 19.9),
+  Edge("Tahanan ng Atleta", "Track and Field Oval - East", 19.9),
 
   Edge("Pylon", "VIC - Front", 26.7),
 
@@ -331,7 +331,7 @@ List<Edge> edges = [
   Edge("Souvenir Shop - Front", "Pedestrian Lane B", 19.8),
   Edge("Souvenir Shop - Front", "PUP Obelisk - East Driveway", 60.8),
 
-  Edge("Student Canteen", "Linear Park - Dining and Meeting Area", 10.3),
+  Edge("Student Canteen", "Linear Park", 10.3),
   Edge("Student Canteen", "Student Canteen - Front", 1.0),
 
   Edge("Student Canteen - Front", "Canteen - Pathwalk L", 4.7),
@@ -364,7 +364,7 @@ List<Edge> edges = [
   Edge("Track and Field Oval", "Track and Field Oval - Southwest", 71.1),
 
   Edge("Track and Field Oval - East", "Track and Field Oval", 43.7),
-  Edge("Track and Field Oval - East", "PUP Tahanan ng Atleta", 19.9),
+  Edge("Track and Field Oval - East", "Tahanan ng Atleta", 19.9),
   Edge("Track and Field Oval - East", "Track and Field Oval - North", 101.3),
   Edge("Track and Field Oval - East", "Track and Field Oval - South", 112.1),
 
@@ -474,7 +474,7 @@ Map<String, Node> nodes = {
   "Lagoon Sidewalk - N": Node("Lagoon Sidewalk - N", 14.598040541496259, 121.01033319719635),
   "Lagoon Sidewalk - S": Node("Lagoon Sidewalk - S", 14.597400719904003, 121.01034526713697),
   "Lagoon Sidewalk - W": Node("Lagoon Sidewalk - W", 14.597704408273339, 121.01025943645325),
-  "Linear Park - Dining and Meeting Area": Node("Linear Park - Dining and Meeting Area", 14.596885051943044, 121.0094992503434),
+  "Linear Park": Node("Linear Park", 14.596885051943044, 121.0094992503434),
   "Linear Park Sidewalk - LHS": Node("Linear Park Sidewalk - LHS", 14.597180303380963, 121.00885315806849),
   "Linear Park Sidewalk - SC": Node("Linear Park Sidewalk - SC", 14.596854551381213, 121.00939228207915),
   "Linear Park Sidewalk - SW": Node("Linear Park Sidewalk - SW", 14.596559946568558, 121.01003467113574),
@@ -501,7 +501,7 @@ Map<String, Node> nodes = {
   "PUP Obelisk - South Driveway": Node("PUP Obelisk - South Driveway", 14.598046836813902, 121.0107589455369),
   "PUP Obelisk - West Driveway": Node("PUP Obelisk - West Driveway", 14.59822204117896, 121.0106006952138),
   "PUP Sta Mesa Ferry Station": Node("PUP Sta Mesa Ferry Station", 14.596151031940266, 121.01083796544616),
-  "PUP Tahanan ng Atleta": Node("PUP Tahanan ng Atleta", 14.5982492517254, 121.01258625022864),
+  "Tahanan ng Atleta": Node("Tahanan ng Atleta", 14.5982492517254, 121.01258625022864),
   "Pylon": Node("Pylon", 14.599168446580144, 121.01179401369039),
   "R.C. Overhead Water Tank": Node("R.C. Overhead Water Tank", 14.597694229595374, 121.00933741907846),
   "South Wing": Node("South Wing", 14.596527073881502, 121.01065920390326),

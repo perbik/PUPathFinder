@@ -19,7 +19,7 @@ List<FacilitiesModel> main_facilities_list = [
     facilityRooms: [],
   ), // same building as building and grounds maintenance office
   FacilitiesModel(
-    "Charlie del Rosario Bldg.",
+    "Charlie Del Rosario Hall",
     "Some descriptions here blah blah",
     "assets/img/Charlie-Bldg.png",
     const LatLng(14.597109560457717, 121.00961913582897),
@@ -75,7 +75,7 @@ List<FacilitiesModel> main_facilities_list = [
     facilityRooms: [],
   ),
   FacilitiesModel(
-    "Main Building - Dome",
+    "Dome",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
     const LatLng(14.597002075341843, 121.0107718566613),
@@ -83,7 +83,7 @@ List<FacilitiesModel> main_facilities_list = [
     facilityRooms: [],
   ),
   FacilitiesModel(
-    "Main Building - East Wing",
+    "East Wing",
     "Some descriptions here blah blah",
     "assets/img/Main-East.png",
     const LatLng(14.596726938008107, 121.01105080639991),
@@ -91,7 +91,7 @@ List<FacilitiesModel> main_facilities_list = [
     facilityRooms: [],
   ),
   FacilitiesModel(
-    "Main Building - North Wing",
+    "North Wing",
     "Under construction",
     "assets/img/Unavailable.png",
     const LatLng(14.597323933668806, 121.01087646282261),
@@ -99,7 +99,7 @@ List<FacilitiesModel> main_facilities_list = [
     facilityRooms: [],
   ), // disable
   FacilitiesModel(
-    "Main Building - South Wing",
+    "South Wing",
     "Some descriptions here blah blah",
     "assets/img/Southwing.png",
     const LatLng(14.596527073881502, 121.01065920390326),
@@ -115,7 +115,7 @@ List<FacilitiesModel> main_facilities_list = [
     ],
   ),
   FacilitiesModel(
-    "Main Building - West Wing",
+    "West Wing",
     "Some descriptions here blah blah",
     "assets/img/Main-West.png",
     const LatLng(14.596885271797717, 121.01042853393947),
@@ -139,7 +139,7 @@ List<FacilitiesModel> main_facilities_list = [
     facilityRooms: [],
   ), // disable
   FacilitiesModel(
-    "Ninoy Aquino Library",
+    "Ninoy Aquino Library and Learning Resources Center",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
     const LatLng(14.597887499712517, 121.00975740230176),
@@ -179,8 +179,8 @@ List<FacilitiesModel> main_facilities_list = [
     facilityRooms: [],
   ), // disable
   FacilitiesModel(
-    "Oval Openfield",
     "Track and Field Oval",
+    "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
     const LatLng(14.59812960213433, 121.01204848293952),
     isAvailable: true,
@@ -211,7 +211,7 @@ List<FacilitiesModel> main_facilities_list = [
     facilityRooms: [],
   ),
   FacilitiesModel(
-    "PUP Gymnasium",
+    "Gymnasium and Sports Center",
     "Some descriptions here blah blah",
     "assets/img/Gymnasium.png",
     const LatLng(14.599212399115132, 121.01081100593235),
@@ -219,7 +219,7 @@ List<FacilitiesModel> main_facilities_list = [
     facilityRooms: [],
   ),
   FacilitiesModel(
-    "PUP Linear Park",
+    "Linear Park",
     "Some descriptions here blah blah",
     "assets/img/Linear Park.png",
     const LatLng(14.596885051943044, 121.0094992503434),
@@ -227,7 +227,7 @@ List<FacilitiesModel> main_facilities_list = [
     facilityRooms: [],
   ),
   FacilitiesModel(
-    "PUP Obelisk",
+    "Mabini Monument PUP Obelisk",
     "Mabini Monument is located here",
     "assets/img/Obelisk.png",
     const LatLng(14.598197971986368, 121.01075044155681),
@@ -235,7 +235,7 @@ List<FacilitiesModel> main_facilities_list = [
     facilityRooms: [],
   ),
   FacilitiesModel(
-    "PUP Sta. Mesa Ferry Station",
+    "PUP Sta Mesa Ferry Station",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
     const LatLng(14.596151031940266, 121.01083796544616),
