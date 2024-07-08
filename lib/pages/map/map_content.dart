@@ -123,7 +123,7 @@ class _MapsContentState extends State<MapsContent> {
                       borderRadius: BorderRadius.circular(25.0),
                     ),
                   ),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
@@ -131,8 +131,8 @@ class _MapsContentState extends State<MapsContent> {
                         color: Colors.white,
                         size: 24,
                       ),
-                      const SizedBox(width: 10),
-                      const Text(
+                      SizedBox(width: 10),
+                      Text(
                         'Set as Origin',
                         style: TextStyle(
                           fontFamily: 'SanomatGrab',
@@ -156,7 +156,7 @@ class _MapsContentState extends State<MapsContent> {
                       borderRadius: BorderRadius.circular(25.0),
                     ),
                   ),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
@@ -164,8 +164,8 @@ class _MapsContentState extends State<MapsContent> {
                         color: Colors.white,
                         size: 24,
                       ),
-                      const SizedBox(width: 10),
-                      const Text(
+                      SizedBox(width: 10),
+                      Text(
                         'Set as Destination',
                         style: TextStyle(
                           fontFamily: 'SanomatGrab',

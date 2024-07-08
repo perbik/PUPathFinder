@@ -6,7 +6,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Amphitheater",
     "Located near at the lagoon and non-food stalls building",
     "assets/img/Amphitheater.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597349043021618, 121.01033935232498),
     isAvailable: true,
     facilityRooms: [],
   ),
