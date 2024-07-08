@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:pupathfinder/pages/map/map_content.dart';
 import '../../model/facilities_model.dart';
 import '../../model/facilities_list.dart';
 
@@ -104,30 +104,12 @@ class _MapPageState extends State<MapPage> {
             width: double.infinity,
             height: double.infinity,
           ),
-          GoogleMap(
-            initialCameraPosition: CameraPosition(
-              target: LatLng(14.59781, 121.01081),
-              zoom: 20.0,
+          Expanded(
+            child: Container(
+              color: Colors.grey,
+              child: MapsContent(),
             ),
-            zoomControlsEnabled: true,
-            zoomGesturesEnabled: true,
-            onMapCreated: (GoogleMapController controller) {
-              // You can use the controller to interact with the map once it's initialized.
-            },
-            mapType: MapType.normal,
-            markers: Set<Marker>.from([
-              Marker(
-                markerId: MarkerId('marker_id'),
-                position: LatLng(14.59781, 121.01081),
-                infoWindow: InfoWindow(
-                  title: 'Your Location',
-                  snippet: 'This is the starting point',
-                ),
-              ),
-            ]),
-            myLocationEnabled: true,
           ),
-
           Positioned(
             top: 50,
             left: 30,
