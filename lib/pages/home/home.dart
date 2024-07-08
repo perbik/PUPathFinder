@@ -12,10 +12,10 @@ import 'sectionTitle.dart';
 import '../../model/bookmark_icons_list.dart';
 
 class Home extends StatefulWidget {
-  const Home({super.key});
+  const Home({Key? key}) : super(key: key);
 
   @override
-  State<Home> createState() => _HomeState();
+  _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
                   ),
                   const SizedBox(height: 20),
                   GestureDetector(
-                    onTap: () {},                 // ...
+                    onTap: () {}, // Placeholder for image interaction
                     child: Container(
                       width: double.infinity,
                       height: 200,
@@ -177,6 +177,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white, // Ensure Scaffold background color
       body: Column(
         children: [
           Expanded(
@@ -239,10 +240,11 @@ class _HomeState extends State<Home> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const MapPage(
-                          destination: '',
-                          origin: '',
-                        )),
+                      builder: (context) => const MapPage(
+                        destination: '',
+                        origin: '',
+                      ),
+                    ),
                   );
                 },
                 child: const Text(

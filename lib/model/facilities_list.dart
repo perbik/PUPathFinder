@@ -62,7 +62,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Interfaith Chapel",
     "Some descriptions here blah blah",
     "assets/img/Interfaith-Chapel.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597179966885722, 121.01133285837156),
     isAvailable: true,
     facilityRooms: [],
   ),
@@ -78,7 +78,7 @@ List<FacilitiesModel> main_facilities_list = [
     "Lagoon",
     "Some descriptions here blah blah",
     "assets/img/Unavailable.png",
-    const LatLng(14.598181612866581, 121.01064866732835),                       // not final
+    const LatLng(14.597732493280542, 121.01045090579692),
     isAvailable: true,
     facilityRooms: [],
   ),

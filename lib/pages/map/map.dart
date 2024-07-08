@@ -30,6 +30,18 @@ class _MapPageState extends State<MapPage> {
     _destinationController.text = widget.destination;
   }
 
+  void _updateOrigin(String origin) {
+    setState(() {
+      _originController.text = origin;
+    });
+  }
+
+  void _updateDestination(String destination) {
+    setState(() {
+      _destinationController.text = destination;
+    });
+  }
+
   // those facilities that have rooms dont display the dialog
   void _showRoomsDialog(BuildContext context) {
     List<FacilitiesModel> facilitiesWithRooms = main_facilities_list
@@ -107,7 +119,10 @@ class _MapPageState extends State<MapPage> {
           Expanded(
             child: Container(
               color: Colors.grey,
-              child: MapsContent(),
+              child: MapsContent(
+                updateOrigin: _updateOrigin,
+                updateDestination: _updateDestination,
+              ),
             ),
           ),
           Positioned(
@@ -164,7 +179,7 @@ class _MapPageState extends State<MapPage> {
               child: Container(
                 padding: const EdgeInsets.fromLTRB(30, 30, 30, 0),
                 width: double.infinity,
-                height: 250,
+                height: 270,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -187,7 +202,7 @@ class _MapPageState extends State<MapPage> {
                       children: [
                         Image.asset(
                           'assets/icons/Direction.png',
-                          width: 26,
+                          width: 30,
                         ),
                         const SizedBox(width: 20),
                         Expanded(
@@ -196,6 +211,7 @@ class _MapPageState extends State<MapPage> {
                             children: [
                               Container(
                                 height: 50,
+                                //color: Colors.grey,
                                 child: TextField(
                                   controller: _originController,
                                   decoration: InputDecoration(
@@ -209,7 +225,7 @@ class _MapPageState extends State<MapPage> {
                                     fillColor: Colors.transparent,
                                     filled: true,
                                     contentPadding:
-                                        const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                     suffixIcon:
                                         _originController.text.isNotEmpty
                                             ? SizedBox(
@@ -238,6 +254,7 @@ class _MapPageState extends State<MapPage> {
                                   },
                                 ),
                               ),
+                              const SizedBox(height: 20),
                               Container(
                                 height: 50,
                                 child: TextField(
@@ -253,7 +270,7 @@ class _MapPageState extends State<MapPage> {
                                     fillColor: Colors.transparent,
                                     filled: true,
                                     contentPadding:
-                                        const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                     suffixIcon:
                                         _destinationController.text.isNotEmpty
                                             ? SizedBox(
@@ -283,6 +300,7 @@ class _MapPageState extends State<MapPage> {
                                   },
                                 ),
                               ),
+                              const SizedBox(height: 20),
                             ],
                           ),
                         ),
