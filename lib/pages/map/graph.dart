@@ -141,7 +141,7 @@ List<Edge> edges = [
 
   Edge("Interfaith Chapel - North Entrance", "Covered Walkway B", 23.7),
   Edge("Interfaith Chapel - North Entrance", "Interfaith Chapel", 24.1),
-  Edge("Interfaith Chapel - North Entrance", "Interfaith Chapel - West Entrance", 60.0),
+  //Edge("Interfaith Chapel - North Entrance", "Interfaith Chapel - West Entrance", 47.1),
   Edge("Interfaith Chapel - North Entrance", "PUP Obelisk - East Driveway", 94.4),
 
   Edge("Interfaith Chapel - South Entrance", "East Wing - Corner B", 28.5),
@@ -151,7 +151,7 @@ List<Edge> edges = [
   Edge("Interfaith Chapel - South Entrance", "Nutrition and Food Science Building", 1.0),
 
   Edge("Interfaith Chapel - West Entrance", "Interfaith Chapel", 24.1),
-  Edge("Interfaith Chapel - West Entrance", "Interfaith Chapel - North Entrance", 47.1),
+  //Edge("Interfaith Chapel - West Entrance", "Interfaith Chapel - North Entrance", 47.1),
   Edge("Interfaith Chapel - West Entrance", "Interfaith Chapel - South Entrance", 47.1),
   Edge("Interfaith Chapel - West Entrance", "Main Building - Entrance B", 12.8),
 

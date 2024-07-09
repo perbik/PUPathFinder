@@ -46,8 +46,7 @@ class _HomeState extends State<Home> {
       isScrollControlled: true,
       builder: (context) {
         return Padding(
-          padding:
-          EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(30, 20, 30, 30),
@@ -64,7 +63,19 @@ class _HomeState extends State<Home> {
                   ),
                   const SizedBox(height: 20),
                   GestureDetector(
-                    onTap: () {}, // Placeholder for image interaction
+                    onTap: bookmark['facility'].isAvailable
+                        ? () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MapPage(
+                            origin: "",
+                            destination: bookmark['facility'].facilityName!,
+                          ),
+                        ),
+                      );
+                    }
+                        : null,
                     child: Container(
                       width: double.infinity,
                       height: 200,
@@ -168,6 +179,7 @@ class _HomeState extends State<Home> {
       },
     );
   }
+
 
   @override
   Widget build(BuildContext context) {
