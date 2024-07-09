@@ -1,6 +1,5 @@
-<p align="center">
-  <img src="assets/icons/PUPathfinderLogo.png" alt="PUPathFinder Logo" width="200"/>
-</p>
+
+![PUPathFinderLogo](https://github.com/perbik/PUPathFinder/assets/71052354/8860e3dc-1c07-415a-8d8c-6051349ad4cf)
 
 <h1 align="center">PUPathFinder</h1>
 
