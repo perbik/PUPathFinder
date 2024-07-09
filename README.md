@@ -15,6 +15,29 @@ The implementation of Djikstra’s algorithm in this project will be through a m
 
 ## Installation
 
+### Prerequisites
+
+1. **Flutter SDK:** Ensure you have the Flutter SDK installed. If you don't have it installed, follow these steps:
+   
+   - **Download Flutter SDK:**
+     - Go to the [Flutter official website](https://flutter.dev/docs/get-started/install).
+     - Choose your operating system (Windows, macOS, Linux) and follow the instructions to download and install the Flutter SDK.
+
+   - **Set Up Environment Variable:**
+     - Add the Flutter bin directory to your system's PATH environment variable. This allows you to run Flutter commands from the terminal.
+     - For example, if you are using Windows, add `C:\path\to\flutter\bin` to your PATH.
+
+   - **Verify Installation:**
+     - Open a terminal or command prompt.
+     - Run `flutter doctor` to check if there are any dependencies you need to install to complete the setup. Follow the instructions provided by the command to resolve any issues.
+
+### Clone the Repository
+
+2. **Clone the repository to your local machine:**
+   ```sh
+   git clone https://github.com/yourusername/your-repo-name.git
+
+
 ## Technologies Utilized
 
 ## Usage
