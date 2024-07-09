@@ -46,9 +46,17 @@
    git clone https://github.com/yourusername/your-repo-name.git
    
 ## Technologies Utilized
-- [Flutter](https://flutter.dev/)
-- [Dart](https://flutter.dev/)
-- [Google Maps API for Android](https://developers.google.com/maps/documentation/android-sdk)
+### Development Tools:
+- [Flutter](https://flutter.dev/): Framework for building native applications using Dart.
+- [Dart](https://flutter.dev/): Programming language used with Flutter for app development.
+- [Android Studio](https://developer.android.com/studio): Integrated development environment (IDE) for Android app development.
+- [VS Code](https://code.visualstudio.com/): Code editor used for Flutter and Dart development.
+### External APIs and Services:
+- [Google Maps API for Android](https://developers.google.com/maps/documentation/android-sdk): API used to integrate Google Maps functionality into Android applications.
+### Design and Prototyping:
+- [Figma](https://www.figma.com/): Tool used for designing user interfaces and prototypes.
+### Supplementary:
+- [Java](https://www.java.com/en/): Although not directly used in the project, it's relevant due to establishment of algorithm logic.
 
 ## Usage
 
