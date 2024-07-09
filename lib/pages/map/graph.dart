@@ -1,4 +1,4 @@
-// graph_data.dart
+// graph.dart
 
 class Edge {
   final String source;
@@ -17,7 +17,7 @@ class Node {
 }
 
 List<Edge> edges = [
-  // Define your edges here
+  
   Edge("Amphitheater", "Amphitheater Entrance 1", 1.0),
   Edge("Amphitheater", "Amphitheater Entrance 2", 1.0),
 

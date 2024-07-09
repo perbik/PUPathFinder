@@ -7,13 +7,14 @@ import '../../model/facilities_model.dart';
 class MapsContent extends StatefulWidget {
   final Function(String) updateOrigin;
   final Function(String) updateDestination;
-  final List<LatLng> polylineCoordinates; // Receive polyline coordinates
+  final List<LatLng> polylineCoordinates; // receives polyline coordinates
 
+// constructor 'to
   const MapsContent({
     super.key,
     required this.updateOrigin,
     required this.updateDestination,
-    required this.polylineCoordinates, // Receive polyline coordinates
+    required this.polylineCoordinates, // receives polyline coordinates
   });
 
   @override
@@ -258,8 +259,8 @@ class _MapsContentState extends State<MapsContent> {
         Polyline(
           polylineId: const PolylineId('path'),
           points: widget.polylineCoordinates,
-          color: const Color(0xFFfb5377), // Custom polyline color
-          width: 5, // Custom polyline width
+          color: const Color(0xFFfb5377), // custom polyline color para slay
+          width: 5, // custom polyline width
         ),
       },
       onMapCreated: (GoogleMapController controller) {
@@ -268,7 +269,7 @@ class _MapsContentState extends State<MapsContent> {
       },
       mapType: MapType.normal,
       myLocationEnabled: true,
-      myLocationButtonEnabled: false, // Remove the default location button
+      myLocationButtonEnabled: false, // removes the default location button
     );
   }
 }
