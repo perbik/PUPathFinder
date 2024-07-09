@@ -7,7 +7,6 @@ The implementation of Djikstra’s algorithm in this project will be through a m
 - [Installation](#installation)
 - [Technologies Utilized](#technologies-utilized)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Features
@@ -19,9 +18,6 @@ The implementation of Djikstra’s algorithm in this project will be through a m
 ## Technologies Utilized
 
 ## Usage
-
-## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
 ## License
 This project is licensed under the [MIT License](link/to/license).
