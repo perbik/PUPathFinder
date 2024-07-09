@@ -58,6 +58,8 @@
 - 
 
 ## Application Snapshots
+![ss1](https://github.com/perbik/PUPathFinder/assets/148320122/f1213b63-9b4b-41f8-8cb5-c845a7fbefd3)
+![ss2](https://github.com/perbik/PUPathFinder/assets/148320122/f5ecbd3f-2476-4ffa-b13f-060ff7757b88)
 
 ## Usage
 
