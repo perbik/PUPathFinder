@@ -11,7 +11,9 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Technologies Utilized](#technologies-utilized)
+- [Application Snapshots](#application-snapshots)
 - [Usage](#usage)
+- [Contributors](#contributors)
 - [License](#license)
 
 ## Features
