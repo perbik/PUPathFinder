@@ -31,7 +31,7 @@ class _AppTitleState extends State<AppTitle> {
           Positioned(
             top: 41,
             child: Text(
-              'Where every route, leads to quicker',
+              'Get there quick with Dijkstra\'s logic!',
               style: TextStyle(
                 fontFamily: 'SanomatGrab',
                 fontSize: 14,

@@ -12,7 +12,7 @@ List<FacilitiesModel> main_facilities_list = [
   ),
   FacilitiesModel(
     "Campus Development and Maintenance Building",
-    "Some descriptions here blah blah",
+    "A building where campus development initiatives and maintenance services are planned and organized",
     "assets/img/Unavailable.png",
     const LatLng(14.596330048069238, 121.01118273009989),
     isAvailable: true,
