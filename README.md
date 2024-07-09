@@ -39,9 +39,9 @@ The implementation of Djikstra’s algorithm in this project will be through a m
    git clone https://github.com/yourusername/your-repo-name.git
    
 ## Technologies Utilized
-- Flutter
-- Dart programming language
-- Google Maps API
+- [Flutter](https://flutter.dev/)
+- [Dart](https://flutter.dev/)
+- [Google Maps API for Android](https://developers.google.com/maps/documentation/android-sdk)
 
 ## Usage
 
