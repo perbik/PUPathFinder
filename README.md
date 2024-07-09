@@ -55,6 +55,9 @@
 - [Figma](https://www.figma.com/): Tool used for designing user interfaces and prototypes.
 ### Supplementary:
 - [Java](https://www.java.com/en/): Although not directly used in the project, it's relevant due to establishment of algorithm logic.
+- 
+
+## Application Snapshots
 
 ## Usage
 
