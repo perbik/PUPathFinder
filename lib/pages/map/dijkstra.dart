@@ -40,9 +40,15 @@ class Graph {
 
       if (current == end) { // If the current node is the end node
         final path = <String>[]; // Create a list for the path
+        double totalWeight = 0; // Variable to hold the total weight
         String? step = end; // Set the step to the end node
         while (step != null) { // While the step is not null
           path.insert(0, step); // Insert the step to the path list
+          if (previous[step] != null) {
+            totalWeight += adjList[previous[step]]!
+                .firstWhere((edge) => edge.destination == step)
+                .weight;
+          }
           step = previous[step]; // Set the step to the previous step
         }
 
@@ -53,6 +59,7 @@ class Graph {
 
         print('Dijkstra algorithm ended at: $endTime');
         print('Dijkstra algorithm response time: ${durationInMilliseconds.toStringAsFixed(3)} ms');
+        print('Total weight of the shortest path: $totalWeight');
 
         return path; // Return the path
       }
