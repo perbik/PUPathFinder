@@ -76,7 +76,7 @@ class Bookmarks extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 10),
-                        Container(
+                        SizedBox(
                           width: 70,
                           child: Center(
                             child: Text(
@@ -97,7 +97,7 @@ class Bookmarks extends StatelessWidget {
                       ],
                     ),
                   );
-                }).toList(),
+                }),
                 Column(
                   children: [
                     IconButton(

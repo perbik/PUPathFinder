@@ -39,6 +39,11 @@ List<Edge> edges = [
   Edge("Canteen - Pathwalk L", "Student Canteen - Front", 4.7),
   Edge("Canteen - Pathwalk L", "West Wing - Corner A", 14.2),
 
+  Edge("Canteen - Pathwalk L", "Student Canteen", 15.6),
+  Edge("Canteen - Pathwalk R", "Student Canteen", 15.6),
+  Edge("Student Canteen", "Canteen - Pathwalk L",15.6),
+  Edge("Student Canteen", "Canteen - Pathwalk R",15.6),
+
   Edge("Canteen - Pathwalk R", "Linear Park", 31.3),
   Edge("Canteen - Pathwalk R", "Student Canteen - Front", 4.7),
   Edge("Canteen - Pathwalk R", "Charlie Del Rosario Hall - Entrance", 15.0),
@@ -53,11 +58,11 @@ List<Edge> edges = [
   Edge("Covered Walkway A", "Covered Walkway B", 146.5),
   Edge("Covered Walkway A", "Guard House", 33.2),
   Edge("Covered Walkway A", "Pedestrian Lane B", 21.3),
-  Edge("Covered Walkway A", "Track and Field Oval - North Entrance", 40.9),
+  Edge("Covered Walkway A", "Oval Parking Area", 30.5),
 
   Edge("Covered Walkway B", "Covered Walkway A", 146.5),
   Edge("Covered Walkway B", "Interfaith Chapel - North Entrance", 23.7),
-  Edge("Covered Walkway B", "Track and Field Oval - South", 20.5),
+  Edge("Covered Walkway B", "Track and Field Oval - South Entrance", 20.5),
 
   Edge("Covered Walkway C", "Covered Walkway D", 54.5),
   Edge("Covered Walkway C", "Pedestrian Lane A", 13.3),
@@ -77,8 +82,8 @@ List<Edge> edges = [
   Edge("Dome - Entrance", "West Wing - Corner C", 12.5),
   Edge("Dome - Entrance", "West Wing - Stairs A", 23.9),
 
-  Edge("East Wing", "East Wing - Stairs A", 1.0),
-  Edge("East Wing", "East Wing - Stairs B", 1.0),
+  Edge("East Wing", "East Wing - Stairs A", 30.0),
+  Edge("East Wing", "East Wing - Stairs B", 30.0),
 
   Edge("East Wing - Corner A", "Campus Development and Maintenance Building", 8.0),
   Edge("East Wing - Corner A", "East Wing - Stairs A", 56.0),
@@ -90,12 +95,12 @@ List<Edge> edges = [
   Edge("East Wing - Corner B", "Main Building - Entrance B", 56.0),
 
   Edge("East Wing - Stairs A", "Dome - Entrance", 11.7),
-  Edge("East Wing - Stairs A", "East Wing", 1.0),
+  Edge("East Wing - Stairs A", "East Wing", 30),
   Edge("East Wing - Stairs A", "East Wing - Corner A", 56.0),
   Edge("East Wing - Stairs A", "Main Building - Entrance B", 30.2),
   Edge("East Wing - Stairs A", "South Wing - Entrance", 4.7),
 
-  Edge("East Wing - Stairs B", "East Wing", 1.0),
+  Edge("East Wing - Stairs B", "East Wing", 30),
   Edge("East Wing - Stairs B", "East Wing - Corner A", 13.4),
   Edge("East Wing - Stairs B", "East Wing - Corner B", 13.4),
 
@@ -114,7 +119,7 @@ List<Edge> edges = [
   Edge("Food Stalls C", "Food Stalls B", 47.5),
   Edge("Food Stalls C", "Lagoon - Entrance B", 17.3),
 
-  Edge("Grandstand", "Track and Field Oval - South  Entrance", 67.9),
+  Edge("Grandstand", "Track and Field Oval - South Entrance", 67.9),
   Edge("Grandstand", "Track and Field Oval - West", 11.5),
 
   Edge("Guard House", "Covered Walkway A", 33.2),
@@ -132,7 +137,7 @@ List<Edge> edges = [
 
   Edge("Interfaith Chapel - East Entrance", "Interfaith Chapel", 24.1),
   Edge("Interfaith Chapel - East Entrance", "Interfaith Chapel - South Entrance", 60.0),
-  Edge("Interfaith Chapel - East Entrance", "Track and Field Oval - South  Entrance", 23.3),
+  Edge("Interfaith Chapel - East Entrance", "Track and Field Oval - South Entrance", 23.3),
 
   Edge("Interfaith Chapel - North Entrance", "Covered Walkway B", 23.7),
   Edge("Interfaith Chapel - North Entrance", "Interfaith Chapel", 24.1),
@@ -141,19 +146,19 @@ List<Edge> edges = [
 
   Edge("Interfaith Chapel - South Entrance", "East Wing - Corner B", 28.5),
   Edge("Interfaith Chapel - South Entrance", "Interfaith Chapel", 24.1),
-  Edge("Interfaith Chapel - South Entrance", "Interfaith Chapel - East Entrance", 60.0),
-  Edge("Interfaith Chapel - South Entrance", "Interfaith Chapel - West Entrance", 60.0),
+  Edge("Interfaith Chapel - South Entrance", "Interfaith Chapel - East Entrance", 47.1),
+  Edge("Interfaith Chapel - South Entrance", "Interfaith Chapel - West Entrance", 47.1),
   Edge("Interfaith Chapel - South Entrance", "Nutrition and Food Science Building", 1.0),
 
   Edge("Interfaith Chapel - West Entrance", "Interfaith Chapel", 24.1),
-  Edge("Interfaith Chapel - West Entrance", "Interfaith Chapel - North Entrance", 60.0),
-  Edge("Interfaith Chapel - West Entrance", "Interfaith Chapel - South Entrance", 60.0),
+  Edge("Interfaith Chapel - West Entrance", "Interfaith Chapel - North Entrance", 47.1),
+  Edge("Interfaith Chapel - West Entrance", "Interfaith Chapel - South Entrance", 47.1),
   Edge("Interfaith Chapel - West Entrance", "Main Building - Entrance B", 12.8),
 
-  Edge("Laboratory High School", "Ninoy Aquino Library - Parking Area", 32.1),
+  Edge("Laboratory High School", "R.C. Underground Water Tank", 32.1),
 
   Edge("Laboratory High School - Backside A", "Laboratory High School - Backside B", 23.9),
-  Edge("Laboratory High School - Backside A", "Ninoy Aquino Library - Parking Area", 50.1),
+  Edge("Laboratory High School - Backside A", "R.C. Underground Water Tank", 50.1),
   Edge("Laboratory High School - Backside A", "Property and Supply Building", 27.4),
 
   Edge("Laboratory High School - Backside B", "Laboratory High School - Backside A", 23.9),
@@ -225,7 +230,7 @@ List<Edge> edges = [
   Edge("Main Building - Entrance B", "Interfaith Chapel - West Entrance", 12.8),
 
   Edge("Ninoy Aquino Library - Driveway A", "Ninoy Aquino Library - Entrance", 36.7),
-  Edge("Ninoy Aquino Library - Driveway A", "Ninoy Aquino Library - Parking Area", 28.5),
+  Edge("Ninoy Aquino Library - Driveway A", "Ninoy Aquino Library - Parking Area A", 28.5),
   Edge("Ninoy Aquino Library - Driveway A", "Non-Food Stalls Building - Front Entrance", 24.0),
   Edge("Ninoy Aquino Library - Driveway A", "Charlie Del Rosario Hall - Entrance", 32.6),
 
@@ -233,8 +238,11 @@ List<Edge> edges = [
   Edge("Ninoy Aquino Library - Entrance", "Ninoy Aquino Library and Learning Resources Center", 1.0),
   Edge("Ninoy Aquino Library - Entrance", "R.C. Overhead Water Tank", 36.3),
 
-  Edge("Ninoy Aquino Library - Parking Area", "Ninoy Aquino Library - Driveway A", 28.5),
-  Edge("Ninoy Aquino Library - Parking Area", "R.C. Overhead Water Tank", 26.2),
+  Edge("Ninoy Aquino Library - Parking Area A", "Ninoy Aquino Library - Driveway A", 28.5),
+  Edge("Ninoy Aquino Library - Parking Area A", "R.C. Overhead Water Tank", 26.2),
+
+  Edge("R.C. Underground Water Tank", "R.C. Overhead Water Tank", 21.4),
+  Edge("R.C. Overhead Water Tank", "R.C. Underground Water Tank", 21.4),
 
   Edge("Ninoy Aquino Library and Learning Resources Center", "Ninoy Aquino Library - Entrance", 1.0),
 
@@ -315,7 +323,7 @@ List<Edge> edges = [
 
   Edge("R.C. Overhead Water Tank", "Laboratory High School - Backside A", 21.4),
   Edge("R.C. Overhead Water Tank", "Ninoy Aquino Library - Entrance", 36.3),
-  Edge("R.C. Overhead Water Tank", "Ninoy Aquino Library - Parking Area", 26.2),
+  Edge("R.C. Overhead Water Tank", "Ninoy Aquino Library - Parking Area A", 26.2),
 
   Edge("South Wing", "South Wing - Entrance", 22.2),
 
@@ -332,13 +340,13 @@ List<Edge> edges = [
   Edge("Souvenir Shop - Front", "PUP Obelisk - East Driveway", 60.8),
 
   Edge("Student Canteen", "Linear Park", 10.3),
-  Edge("Student Canteen", "Student Canteen - Front", 1.0),
+  //Edge("Student Canteen", "Student Canteen - Front", 1.0),
 
   Edge("Student Canteen - Front", "Canteen - Pathwalk L", 4.7),
   Edge("Student Canteen - Front", "Canteen - Pathwalk R", 4.7),
   Edge("Student Canteen - Front", "Lagoon - Entrance B", 68.7),
   Edge("Student Canteen - Front", "Main Building - Entrance A", 76.1),
-  Edge("Student Canteen - Front", "Student Canteen", 1.0),
+  //Edge("Student Canteen - Front", "Student Canteen", 1.0),
   Edge("Student Canteen - Front", "West Wing - Corner A", 15.1),
 
   Edge("Swimming Pool", "North Parking Area", 38.4),
@@ -365,15 +373,22 @@ List<Edge> edges = [
 
   Edge("Track and Field Oval - East", "Track and Field Oval", 43.7),
   Edge("Track and Field Oval - East", "Tahanan ng Atleta", 19.9),
-  Edge("Track and Field Oval - East", "Track and Field Oval - North", 101.3),
+  Edge("Track and Field Oval - East", "Track and Field Oval - Northeast", 58.8),
   Edge("Track and Field Oval - East", "Track and Field Oval - South", 112.1),
 
   Edge("Track and Field Oval - North", "Track and Field Oval", 79.8),
-  Edge("Track and Field Oval - North", "Track and Field Oval - East", 101.3),
+  Edge("Track and Field Oval - North", "Track and Field Oval - Northeast", 41.3),
+  Edge("Track and Field Oval - North", "Track and Field Oval - Northwest", 41.3),
   Edge("Track and Field Oval - North", "Track and Field Oval - North Entrance", 12.0),
   Edge("Track and Field Oval - North", "Track and Field Oval - West", 104.8),
 
-  Edge("Track and Field Oval - North Entrance", "Covered Walkway A", 40.9),
+  Edge("Track and Field Oval - Northeast", "Track and Field Oval - North", 41.3),
+  Edge("Track and Field Oval - Northeast", "Track and Field Oval - East", 58.8),
+
+  Edge("Track and Field Oval - Northwest", "Track and Field Oval - North", 41.3),
+  Edge("Track and Field Oval - Northwest", "Track and Field Oval - West", 58.8),
+
+  Edge("Oval Parking Area", "Covered Walkway A", 30.5),
   Edge("Track and Field Oval - North Entrance", "Track and Field Oval - North", 12.0),
 
   Edge("Track and Field Oval - South", "Track and Field Oval", 80.2),
@@ -382,7 +397,7 @@ List<Edge> edges = [
 
   Edge("Track and Field Oval - Southwest", "Track and Field Oval", 71.1),
   Edge("Track and Field Oval - Southwest", "Track and Field Oval - South", 43.3),
-  Edge("Track and Field Oval - Southwest", "Track and Field Oval - South  Entrance", 10.6),
+  Edge("Track and Field Oval - Southwest", "Track and Field Oval - South Entrance", 10.6),
   Edge("Track and Field Oval - Southwest", "Track and Field Oval - West", 60.9),
 
   Edge("Track and Field Oval - South Entrance", "Covered Walkway B", 20.5),
@@ -392,17 +407,16 @@ List<Edge> edges = [
 
   Edge("Track and Field Oval - West", "Grandstand", 11.5),
   Edge("Track and Field Oval - West", "Track and Field Oval", 42.6),
-  Edge("Track and Field Oval - West", "Track and Field Oval - North", 104.8),
+  Edge("Track and Field Oval - West", "Track and Field Oval - Northwest", 58.8),
   Edge("Track and Field Oval - West", "Track and Field Oval - Southwest", 60.9),
 
   Edge("VIC - Front", "Covered Walkway C", 20.7),
   Edge("VIC - Front", "Pylon", 26.7),
   Edge("VIC - Front", "Visitors Information Center", 5.7),
-
   Edge("Visitors Information Center", "VIC - Front", 5.7),
 
-  Edge("West Wing", "West Wing - Stairs A", 1.0),
-  Edge("West Wing", "West Wing - Stairs B", 1.0),
+  Edge("West Wing", "West Wing - Stairs A", 30),
+  Edge("West Wing", "West Wing - Stairs B", 30),
 
   Edge("West Wing - Corner A", "Canteen - Pathwalk L", 14.2),
   Edge("West Wing - Corner A", "Student Canteen - Front", 15.1),
@@ -421,14 +435,22 @@ List<Edge> edges = [
   Edge("West Wing - Stairs A", "Dome - Entrance", 23.9),
   Edge("West Wing - Stairs A", "Main Building - Entrance A", 5.5),
   Edge("West Wing - Stairs A", "South Wing - Entrance", 32.6),
-  Edge("West Wing - Stairs A", "West Wing", 1.0),
+  Edge("West Wing - Stairs A", "West Wing", 30),
   Edge("West Wing - Stairs A", "West Wing - Corner A", 59.8),
   Edge("West Wing - Stairs A", "West Wing - Corner C", 29.4),
 
-  Edge("West Wing - Stairs B", "West Wing", 1.0),
+  Edge("West Wing - Stairs B", "West Wing", 30),
   Edge("West Wing - Stairs B", "West Wing - Corner A", 15.7),
   Edge("West Wing - Stairs B", "West Wing - Corner B", 15.7),
-  
+
+  Edge("Tarp Walkway", "Guard House", 5.3),
+  Edge("Guard House", "Tarp Walkway", 5.3),
+
+  Edge("Tarp Walkway", "Oval Parking Area", 8.5),
+
+  Edge("Oval Parking Area", "Track and Field Oval - North Entrance", 15.6),
+  Edge("Track and Field Oval - North Entrance", "Oval Parking Area", 15.6),
+
 ];
 
 Map<String, Node> nodes = {
@@ -456,10 +478,10 @@ Map<String, Node> nodes = {
   "Food Stalls B": Node("Food Stalls B", 14.597682252014906, 121.01070291857448),
   "Food Stalls C": Node("Food Stalls C", 14.597314970691853, 121.01063049893509),
   "Grandstand": Node("Grandstand", 14.598053558950635, 121.01150327191559),
-  "Guard House": Node("Guard House", 14.599069282242757, 121.0118275771096),
+  "Guard House": Node("Guard House", 14.599050551259824, 121.01180349737167),
   "Gymnasium - Entrance": Node("Gymnasium - Entrance", 14.599397831387405, 121.0110274525707),
   "Gymnasium and Sports Center": Node("Gymnasium and Sports Center", 14.599212399115132, 121.01081100593235),
-  "Interfaith Chapel": Node("Interfaith Chapel", 14.597179966885722, 121.01133285837156),
+  "Interfaith Chapel": Node("Interfaith Chapel", 14.597176212062733, 121.0114370175715),
   "Interfaith Chapel - East Entrance": Node("Interfaith Chapel - East Entrance", 14.597231894591777, 121.01175930083491),
   "Interfaith Chapel - North Entrance": Node("Interfaith Chapel - North Entrance", 14.597488094086748, 121.011347829294),
   "Interfaith Chapel - South Entrance": Node("Interfaith Chapel - South Entrance", 14.596863028529851, 121.01156313417007),
@@ -483,7 +505,8 @@ Map<String, Node> nodes = {
   "Main Building - Entrance B": Node("Main Building - Entrance B", 14.597038846144832, 121.01096385408384),
   "Ninoy Aquino Library - Driveway A": Node("Ninoy Aquino Library - Driveway A", 14.597498218697536, 121.00979640103365),
   "Ninoy Aquino Library - Entrance": Node("Ninoy Aquino Library - Entrance", 14.59775270495819, 121.00968841244614),
-  "Ninoy Aquino Library - Parking Area": Node("Ninoy Aquino Library - Parking Area", 14.597573491888815, 121.00959791757758),
+  "Ninoy Aquino Library - Parking Area A": Node("Ninoy Aquino Library - Parking Area A", 14.597566548055626, 121.00962013844136),
+  "R.C. Underground Water Tank": Node("R.C. Underground Water Tank", 14.597718392179178, 121.00912258868054),
   "Ninoy Aquino Library and Learning Resources Center": Node("Ninoy Aquino Library and Learning Resources Center", 14.597887499712517, 121.00975740230176),
   "Non-Food Stalls - Lagoon Entrance": Node("Non-Food Stalls - Lagoon Entrance", 14.597267207703277, 121.01016343691995),
   "Non-Food Stalls Building": Node("Non-Food Stalls Building", 14.597401122747984, 121.01007603247875),
@@ -519,7 +542,9 @@ Map<String, Node> nodes = {
   "Track and Field Oval": Node("Track and Field Oval", 14.59812960213433, 121.01204848293952),
   "Track and Field Oval - East": Node("Track and Field Oval - East", 14.598191698155967, 121.01240278093826),
   "Track and Field Oval - North": Node("Track and Field Oval - North", 14.598824903407934, 121.01193242213498),
-  "Track and Field Oval - North Entrance": Node("Track and Field Oval - North Entrance", 14.598946038118019, 121.01189448997344),
+  "Track and Field Oval - Northeast": Node("Track and Field Oval - Northeast", 14.598649155692462, 121.01232681546747),
+  "Track and Field Oval - Northwest": Node("Track and Field Oval - Northwest", 14.59859724340333, 121.0116307822628),
+  "Track and Field Oval - North Entrance": Node("Track and Field Oval - North Entrance", 14.598958206826328, 121.0119496777557),
   "Track and Field Oval - South": Node("Track and Field Oval - South", 14.597384129383713, 121.01211259990289),
   "Track and Field Oval - Southwest": Node("Track and Field Oval - Southwest", 14.59749058179936, 121.01181103921851),
   "Track and Field Oval - South Entrance": Node("Track and Field Oval - South Entrance", 14.597384129383713, 121.01170482916618),
@@ -532,5 +557,6 @@ Map<String, Node> nodes = {
   "West Wing - Corner C": Node("West Wing - Corner C", 14.596808097767127, 121.01067539330772),
   "West Wing - Stairs A": Node("West Wing - Stairs A", 14.597068927873133, 121.01062116837599),
   "West Wing - Stairs B": Node("West Wing - Stairs B", 14.596805011018468, 121.01012676458652),
-
+  "Tarp Walkway": Node("Tarp Walkway", 14.599029753820439, 121.01175617277391),
+  "Oval Parking Area": Node("Oval Parking Area", 14.59900444662481, 121.01179171204161),
 };

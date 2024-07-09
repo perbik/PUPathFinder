@@ -4,11 +4,10 @@ import 'graph.dart';
 class Graph {
   final Map<String, List<Edge>> adjList = {};
 
-// constructor for the graph with the adjacency list
+  // Constructor for the graph with the adjacency list
   Graph(List<Edge> edges) {
     for (var edge in edges) {
-
-      // adding source and destination nodes to adjacency list
+      // Adding source and destination nodes to adjacency list
       adjList.putIfAbsent(edge.source, () => []).add(edge);
       adjList.putIfAbsent(edge.destination, () => []).add(
         Edge(edge.destination, edge.source, edge.weight),
@@ -16,49 +15,70 @@ class Graph {
     }
   }
 
-  // actual method for dijkstrawr
+  // Actual method for Dijkstra's algorithm
   List<String> dijkstra(String start, String end) {
-    final distances = <String, double>{}; // for distance from a single node
-    final previous = <String, String?>{}; // for tracking the paths
+    final distances = <String, double>{}; // For distance from a single node
+    final previous = <String, String?>{}; // For tracking the paths
     final priorityQueue = PriorityQueue<MapEntry<String, double>>(
           (a, b) => a.value.compareTo(b.value),
     );
 
-    adjList.keys.forEach((node) {
-      distances[node] = double.infinity; // setting initial distances t infinitea
-      previous[node] = null; // setting initial previous node to null
-    });
-    distances[start] = 0; // setting the distance of the start node to 0
+    for (var node in adjList.keys) {
+      distances[node] = double.infinity; // Setting initial distances to infinite
+      previous[node] = null; // Setting initial previous node to null
+    }
+    distances[start] = 0; // Setting the distance of the start node to 0
 
-    priorityQueue.add(MapEntry(start, 0)); // adding the start node to the priority queue
+    // Start time
+    final startTime = DateTime.now();
+    print('Dijkstra algorithm started at: $startTime');
 
-    while (priorityQueue.isNotEmpty) { // while the priority queue is not empty
-      final current = priorityQueue.removeFirst().key; // remove the first node from the priority queue
+    priorityQueue.add(MapEntry(start, 0)); // Adding the start node to the priority queue
 
-      if (current == end) { // if the current node is the end node
-        final path = <String>[]; // create a list for the path
-        String? step = end; // set the step to the end node
-        while (step != null) { // while the step is not null 
-          path.insert(0, step); // insert the step to the path list
-          step = previous[step]; // set the step to the previous step
+    while (priorityQueue.isNotEmpty) { // While the priority queue is not empty
+      final current = priorityQueue.removeFirst().key; // Remove the first node from the priority queue
+
+      if (current == end) { // If the current node is the end node
+        final path = <String>[]; // Create a list for the path
+        String? step = end; // Set the step to the end node
+        while (step != null) { // While the step is not null
+          path.insert(0, step); // Insert the step to the path list
+          step = previous[step]; // Set the step to the previous step
         }
-        return path; // return na path
+
+        // End time
+        final endTime = DateTime.now();
+        final duration = endTime.microsecondsSinceEpoch - startTime.microsecondsSinceEpoch;
+        final durationInMilliseconds = duration / 1000;
+
+        print('Dijkstra algorithm ended at: $endTime');
+        print('Dijkstra algorithm response time: ${durationInMilliseconds.toStringAsFixed(3)} ms');
+
+        return path; // Return the path
       }
 
-      if (distances[current]! == double.infinity) { // if 'yung' distance of the current node is infinite
-        break; // break the loop
+      if (distances[current]! == double.infinity) { // If the distance of the current node is infinite
+        break; // Break the loop
       }
 
-      for (var edge in adjList[current]!) { // for each edge in the adjacency list of the current node
-        final alt = distances[current]! + edge.weight; // calculate na the distance
-        if (alt < distances[edge.destination]!) { // if 'yung' distance is less than the distance of the destination node
-          distances[edge.destination] = alt; // set 'yung' distance of the destination node to the calculated distance
-          previous[edge.destination] = current;   // set 'yung' previous node of the destination node to the current node
-          priorityQueue.add(MapEntry(edge.destination, alt)); // add the destination node to the priority queue
+      for (var edge in adjList[current]!) { // For each edge in the adjacency list of the current node
+        final alt = distances[current]! + edge.weight; // Calculate the distance
+        if (alt < distances[edge.destination]!) { // If the distance is less than the distance of the destination node
+          distances[edge.destination] = alt; // Set the distance of the destination node to the calculated distance
+          previous[edge.destination] = current; // Set the previous node of the destination node to the current node
+          priorityQueue.add(MapEntry(edge.destination, alt)); // Add the destination node to the priority queue
         }
       }
     }
 
-    return []; // return an empty list if walang path
+    // End time in case no path is found
+    final endTime = DateTime.now();
+    final duration = endTime.microsecondsSinceEpoch - startTime.microsecondsSinceEpoch;
+    final durationInMilliseconds = duration / 1000;
+
+    print('Dijkstra algorithm ended at: $endTime');
+    print('Dijkstra algorithm response time: ${durationInMilliseconds.toStringAsFixed(3)} ms (no path found)');
+
+    return []; // Return an empty list if no path is found
   }
 }

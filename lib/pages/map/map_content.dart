@@ -10,11 +10,11 @@ class MapsContent extends StatefulWidget {
   final List<LatLng> polylineCoordinates; // Receive polyline coordinates
 
   const MapsContent({
-    Key? key,
+    super.key,
     required this.updateOrigin,
     required this.updateDestination,
     required this.polylineCoordinates, // Receive polyline coordinates
-  }) : super(key: key);
+  });
 
   @override
   _MapsContentState createState() => _MapsContentState();
@@ -31,34 +31,62 @@ class _MapsContentState extends State<MapsContent> {
 
   final String _mapStyle = '''
     [
+  {
+    "featureType": "poi.attraction",
+    "elementType": "labels",
+    "stylers": [
       {
-        "elementType": "labels",
-        "stylers": [
-          { "visibility": "off" }
-        ]
-      },
-      {
-        "featureType": "administrative.land_parcel",
-        "stylers": [
-          { "visibility": "off" }
-        ]
-      },
-      {
-        "featureType": "administrative.neighborhood",
-        "stylers": [
-          { "visibility": "off" }
-        ]
+        "visibility": "on"
       }
     ]
+  },
+  {
+    "featureType": "poi.attraction",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.attraction",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.attraction",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.attraction",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "on"
+      }
+    ]
+  }
+]
   ''';
 
   LatLng? _currentPosition;
+  String? _originFacility;
+  String? _destinationFacility;
 
   @override
   void initState() {
     super.initState();
     _initializeMarkers();
-    _getCurrentLocation();
   }
 
   void _initializeMarkers() {
@@ -67,10 +95,28 @@ class _MapsContentState extends State<MapsContent> {
         Marker(
           markerId: MarkerId(facility.facilityName),
           position: facility.coordinates,
+          icon: _getMarkerIcon(facility.facilityName),
           onTap: () => _showFacilityCard(facility),
         ),
       );
     }
+  }
+
+  BitmapDescriptor _getMarkerIcon(String facilityName) {
+    if (facilityName == _originFacility) {
+      return BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta);
+    } else if (facilityName == _destinationFacility) {
+      return BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed);
+    } else {
+      return BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure);
+    }
+  }
+
+  void _updateMarkers() {
+    setState(() {
+      _markers.clear();
+      _initializeMarkers();
+    });
   }
 
   void _showFacilityCard(FacilitiesModel facility) {
@@ -119,7 +165,11 @@ class _MapsContentState extends State<MapsContent> {
                 FilledButton(
                   onPressed: () {
                     Navigator.pop(context);
-                    widget.updateOrigin(facility.facilityName);
+                    setState(() {
+                      _originFacility = facility.facilityName;
+                      widget.updateOrigin(facility.facilityName);
+                    });
+                    _updateMarkers();
                   },
                   style: FilledButton.styleFrom(
                     backgroundColor: const Color(0xFFfb5377),
@@ -152,7 +202,11 @@ class _MapsContentState extends State<MapsContent> {
                 FilledButton(
                   onPressed: () {
                     Navigator.pop(context);
-                    widget.updateDestination(facility.facilityName);
+                    setState(() {
+                      _destinationFacility = facility.facilityName;
+                      widget.updateDestination(facility.facilityName);
+                    });
+                    _updateMarkers();
                   },
                   style: FilledButton.styleFrom(
                     backgroundColor: const Color(0xFFfb5377),
@@ -194,7 +248,7 @@ class _MapsContentState extends State<MapsContent> {
     return GoogleMap(
       initialCameraPosition: const CameraPosition(
         target: LatLng(14.59781, 121.01081),
-        zoom: 50.0,
+        zoom: 20.0,
       ),
       zoomControlsEnabled: true,
       zoomGesturesEnabled: true,
@@ -202,31 +256,19 @@ class _MapsContentState extends State<MapsContent> {
       compassEnabled: false,
       polylines: {
         Polyline(
-          polylineId: PolylineId('path'),
+          polylineId: const PolylineId('path'),
           points: widget.polylineCoordinates,
-          color: Colors.blue,
-          width: 5,
+          color: const Color(0xFFfb5377), // Custom polyline color
+          width: 5, // Custom polyline width
         ),
       },
       onMapCreated: (GoogleMapController controller) {
         _controller = controller;
         _controller.animateCamera(CameraUpdate.newLatLngBounds(_bounds, 0));
-        _controller.setMapStyle(_mapStyle);
       },
       mapType: MapType.normal,
       myLocationEnabled: true,
       myLocationButtonEnabled: false, // Remove the default location button
     );
-  }
-
-  void _getCurrentLocation() async {
-    try {
-      var locationData = await location.getLocation();
-      setState(() {
-        _currentPosition = LatLng(locationData.latitude!, locationData.longitude!);
-      });
-    } catch (e) {
-      print('Error getting current location: $e');
-    }
   }
 }

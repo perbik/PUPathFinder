@@ -75,7 +75,7 @@ class _DestinationState extends State<Destination> {
           height: 285,
           //color: Colors.grey,
           child: ListView.builder(
-            padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+            padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
             itemCount: displayList.length,
             itemBuilder: (context, index) {
               final facility = displayList[index];

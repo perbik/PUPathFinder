@@ -1,10 +1,5 @@
-import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:pupathfinder/pages/home/pageBookmarks.dart';
 import 'package:pupathfinder/pages/home/sectionSearch.dart';
 import '../map/map.dart';
@@ -12,7 +7,7 @@ import 'sectionTitle.dart';
 import '../../model/bookmark_icons_list.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   @override
   _HomeState createState() => _HomeState();

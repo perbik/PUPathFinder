@@ -13,11 +13,11 @@ class MapPage extends StatefulWidget {
   final List<String>? facilityRooms;
 
   const MapPage({
-    Key? key,
+    super.key,
     required this.origin,
     required this.destination,
     this.facilityRooms,
-  }) : super(key: key);
+  });
 
   @override
   State<MapPage> createState() => _MapPageState();
@@ -211,9 +211,9 @@ class _MapPageState extends State<MapPage> {
             alignment: Alignment.bottomCenter,
             child: SingleChildScrollView(
               child: Container(
-                padding: const EdgeInsets.fromLTRB(30, 30, 30, 0),
+                padding: const EdgeInsets.fromLTRB(30, 25, 30, 0),
                 width: double.infinity,
-                height: 270,
+                height: 255,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -243,7 +243,7 @@ class _MapPageState extends State<MapPage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
-                              Container(
+                              SizedBox(
                                 height: 50,
                                 child: TextField(
                                   controller: _originController,
@@ -266,7 +266,7 @@ class _MapPageState extends State<MapPage> {
                                       height: 24,
                                       child: IconButton(
                                         iconSize: 20,
-                                        icon: Icon(Icons.clear),
+                                        icon: const Icon(Icons.clear),
                                         onPressed: () {
                                           setState(() {
                                             _originController.clear();
@@ -288,7 +288,7 @@ class _MapPageState extends State<MapPage> {
                                 ),
                               ),
                               const SizedBox(height: 20),
-                              Container(
+                              SizedBox(
                                 height: 50,
                                 child: TextField(
                                   controller: _destinationController,
@@ -311,7 +311,7 @@ class _MapPageState extends State<MapPage> {
                                       height: 24,
                                       child: IconButton(
                                         iconSize: 20,
-                                        icon: Icon(Icons.clear),
+                                        icon: const Icon(Icons.clear),
                                         onPressed: () {
                                           setState(() {
                                             _destinationController
@@ -348,9 +348,6 @@ class _MapPageState extends State<MapPage> {
                           backgroundColor: const Color(0xFFfb5377),
                           foregroundColor: Colors.white,
                           minimumSize: const Size(double.infinity, 60),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25.0),
-                          ),
                         ),
                         child: const Text(
                           'Find Shortest Path',
