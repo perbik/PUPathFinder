@@ -1,5 +1,4 @@
-
-![PUPathFinderLogo](https://github.com/perbik/PUPathFinder/assets/71052354/8860e3dc-1c07-415a-8d8c-6051349ad4cf)
+![PUPathFinderLo![Project - Group 7](https://github.com/perbik/PUPathFinder/assets/71052354/8d131851-77fb-4749-933b-01bc88fb9615)
 
 <h1 align="center">PUPathFinder</h1>
 
