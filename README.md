@@ -63,5 +63,7 @@
 
 ## Usage
 
+## Contributors
+
 ## License
 This project is licensed under the [MIT License](link/to/license).
