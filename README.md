@@ -10,8 +10,8 @@
 ## Table of Contents
 - [Features](#features)
 - [How to Use](#how-to-use)
-- [Installation](#installation)
 - [Technologies Utilized](#technologies-utilized)
+- [Installation](#installation)
 - [Application Snapshots](#application-snapshots)
 - [Running the Application on a Virtual Device](#running-the-application-on-a-virtual-device)
 - [Running the Application on a Hardware Device](#running-the-application-on-a-hardware-device)
@@ -94,6 +94,8 @@
    - Ensure the emulator is running.
    - Click the **Run** button or use the shortcut `Shift + F10` to start the app on the emulator.
 
+For more information, [click here.](https://developer.android.com/studio/run/emulator)
+
 ### Using Visual Studio Code
 
 1. **Install Visual Studio Code:**
@@ -137,6 +139,8 @@
    - Open your Flutter project in Android Studio.
    - Select your connected device from the device dropdown menu.
    - Click the **Run** button or use the shortcut `Shift + F10` to start the app on your device.
+
+For more information, [click here.](https://developer.android.com/studio/run/device)
 
 ### Using Visual Studio Code
 
