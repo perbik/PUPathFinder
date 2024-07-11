@@ -178,7 +178,7 @@ By following these steps, you can set up and run your Flutter application on an 
 - Rustia, Julia Kyla
 
 ## License
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed under the [MIT License](LICENSE.txt).
 
 
 
