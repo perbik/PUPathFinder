@@ -1,12 +1,12 @@
 ![Project - Group 7](https://github.com/perbik/PUPathFinder/assets/71052354/d76a835b-313c-4d2f-8b5f-3be76ebc5e72)
 
 <h1 align="center">PUPathFinder</h1>
-<p align="center">Access the paper <a href="https://drive.google.com/file/d/1_vraswlO2ZHKJo4F_UtmDuwud6aNKQf5/view?usp=sharing">here</a>.</p>
 
 <p align="justify" style="text-align: justify;">
   The implementation of <b>Djikstra’s algorithm</b> in this project will be through a mobile application for user convenience. In the app, users will select a point of origin and a point of destination only from the given list of facilities in PUP - Mabini Campus. For instance, the user can pick Lagoon as a source or origin and Ninoy Aquino Library and Learning Resources Center (NALLRC) as the destination. It then displays the shortest possible path or route from the chosen origin to the destination using Dijkstra’s algorithm. In this project, the graph diagram will have facilities representing the nodes, while the usual routes represent the edges.
 </p>
 
+<p align="justify">Access the paper <a href="https://drive.google.com/file/d/1_vraswlO2ZHKJo4F_UtmDuwud6aNKQf5/view?usp=sharing">here</a> for more information.</p>
 
 ## Table of Contents
 - [Features](#features)
