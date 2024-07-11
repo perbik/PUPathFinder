@@ -174,6 +174,6 @@ This project is licensed under the [MIT License](link/to/license).
 
 ## Demo
 
-![Screen_recording_20240710_000351-ezgif com-optimize](https://github.com/perbik/PUPathFinder/assets/71052354/6f4fa671-de57-4432-a66a-2b0acb8b35d1)
+![Screen_recording_20240710_000351-ezgif com-optimize](https://github.com/perbik/PUPathFinder/assets/71052354/6f4fa671-de57-4432-a66a-2b0acb8b35d1) ![Screen_recording_20240710_000351-ezgif com-optimize](https://github.com/perbik/PUPathFinder/assets/71052354/6f4fa671-de57-4432-a66a-2b0acb8b35d1)
 
 
