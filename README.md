@@ -9,17 +9,42 @@
 
 ## Table of Contents
 - [Features](#features)
+- [How to Use](#how-to-use)
 - [Installation](#installation)
 - [Technologies Utilized](#technologies-utilized)
 - [Application Snapshots](#application-snapshots)
-- [How to Use](#how-to-use)
-- [How to Run the App on an Emulator](#how-to-run-the-app-on-an-emulator)
+- [Running the Application on a Virtual Device](#running-the-application-on-a-virtual-device)
+- [Running the Application on a Hardware Device](#running-the-application-on-a-hardware-device)
+- [Demo](#demo)
 - [Contributors](#contributors)
 - [License](#license)
 
 ## Features
 - Display the shortest path from selected source and destination in PUP Mabini Campus using Dijkstra's algorithm.
 - Add bookmarks of your favorite destinations.
+
+## How to Use
+- Select an origin and a destination in the map. You can do this by searching in the home page or tapping 'Choose from map' and picking a marker.
+- Tap 'Find shortest path' and the app will then display the shortest path from the origin to the destination.
+- If a path is not found, it will display a prompt. This can happen if the building or facility is disabled, as it may be under construction.
+- If you choose to type the origin or destination, it must be ensured that the exact name of the building, which can be checked in the search bar, is typed.
+
+## Technologies Utilized
+### Development Tools:
+- [Flutter](https://flutter.dev/): Framework for building native applications using Dart.
+- [Dart](https://flutter.dev/): Programming language used with Flutter for app development.
+- [Android Studio](https://developer.android.com/studio): Integrated development environment (IDE) for Android app development.
+- [VS Code](https://code.visualstudio.com/): Code editor used for Flutter and Dart development.
+### External APIs and Services:
+- [Google Maps API for Android](https://developers.google.com/maps/documentation/android-sdk): API used to integrate Google Maps functionality into Android applications.
+### Design and Prototyping:
+- [Figma](https://www.figma.com/): Tool used for designing user interfaces and prototypes.
+### Supplementary:
+- [Java](https://www.java.com/en/): Although not directly used in the project, it's relevant due to establishment of algorithm logic.
+
+## Application Snapshots
+![ss1](https://github.com/perbik/PUPathFinder/assets/148320122/f1213b63-9b4b-41f8-8cb5-c845a7fbefd3)
+![ss2](https://github.com/perbik/PUPathFinder/assets/148320122/f5ecbd3f-2476-4ffa-b13f-060ff7757b88)
 
 ## Installation
 
@@ -46,31 +71,8 @@
    ```sh
    git clone https://github.com/yourusername/your-repo-name.git
    
-## Technologies Utilized
-### Development Tools:
-- [Flutter](https://flutter.dev/): Framework for building native applications using Dart.
-- [Dart](https://flutter.dev/): Programming language used with Flutter for app development.
-- [Android Studio](https://developer.android.com/studio): Integrated development environment (IDE) for Android app development.
-- [VS Code](https://code.visualstudio.com/): Code editor used for Flutter and Dart development.
-### External APIs and Services:
-- [Google Maps API for Android](https://developers.google.com/maps/documentation/android-sdk): API used to integrate Google Maps functionality into Android applications.
-### Design and Prototyping:
-- [Figma](https://www.figma.com/): Tool used for designing user interfaces and prototypes.
-### Supplementary:
-- [Java](https://www.java.com/en/): Although not directly used in the project, it's relevant due to establishment of algorithm logic.
-- 
 
-## Application Snapshots
-![ss1](https://github.com/perbik/PUPathFinder/assets/148320122/f1213b63-9b4b-41f8-8cb5-c845a7fbefd3)
-![ss2](https://github.com/perbik/PUPathFinder/assets/148320122/f5ecbd3f-2476-4ffa-b13f-060ff7757b88)
-
-## How to Use
-- Select an origin and a destination in the map. You can do this by searching in the home page or tapping 'Choose from map' and picking a marker.
-- Tap 'Find shortest path' and the app will then display the shortest path from the origin to the destination.
-- If a path is not found, it will display a prompt. This can happen if the building or facility is disabled, as it may be under construction.
-- If you choose to type the origin or destination, it must be ensured that the exact name of the building, which can be checked in the search bar, is typed.
-
-## How to Run the App on an Emulator
+## Running the Application on a Virtual Device
 
 ### Using Android Studio
 
@@ -162,6 +164,8 @@
 
 By following these steps, you can set up and run your Flutter application on an emulator using either Android Studio or Visual Studio Code.
 
+## Demo
+![Screen_recording_20240710_000351-ezgif com-optimize](https://github.com/perbik/PUPathFinder/assets/71052354/6f4fa671-de57-4432-a66a-2b0acb8b35d1)
 
 ## Contributors
 - Carlos, Henry James R.
@@ -172,8 +176,6 @@ By following these steps, you can set up and run your Flutter application on an 
 ## License
 This project is licensed under the [MIT License](link/to/license).
 
-## Demo
 
-![Screen_recording_20240710_000351-ezgif com-optimize](https://github.com/perbik/PUPathFinder/assets/71052354/6f4fa671-de57-4432-a66a-2b0acb8b35d1) ![Screen_recording_20240710_000351-ezgif com-optimize](https://github.com/perbik/PUPathFinder/assets/71052354/6f4fa671-de57-4432-a66a-2b0acb8b35d1)
 
 
