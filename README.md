@@ -13,6 +13,7 @@
 - [Technologies Utilized](#technologies-utilized)
 - [Application Snapshots](#application-snapshots)
 - [How to Use](#how-to-use)
+- [How to Run the App on an Emulator](#how-to-run-the-app-on-an-emulator)
 - [Contributors](#contributors)
 - [License](#license)
 
@@ -69,7 +70,7 @@
 - If a path is not found, it will display a prompt. This can happen if the building or facility is disabled, as it may be under construction.
 - If you choose to type the origin or destination, it must be ensured that the exact name of the building, which can be checked in the search bar, is typed.
 
-## Running the Application on an Emulator
+## How to Run the App on an Emulator
 
 ### Using Android Studio
 
