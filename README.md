@@ -44,8 +44,6 @@
    
    ```sh
    git clone https://github.com/yourusername/your-repo-name.git
-
-3. 
    
 ## Technologies Utilized
 ### Development Tools:
