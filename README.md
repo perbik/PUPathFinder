@@ -12,7 +12,7 @@
 - [Installation](#installation)
 - [Technologies Utilized](#technologies-utilized)
 - [Application Snapshots](#application-snapshots)
-- [Usage](#usage)
+- [How to Use](#how-to-use)
 - [Contributors](#contributors)
 - [License](#license)
 
@@ -63,9 +63,17 @@
 ![ss1](https://github.com/perbik/PUPathFinder/assets/148320122/f1213b63-9b4b-41f8-8cb5-c845a7fbefd3)
 ![ss2](https://github.com/perbik/PUPathFinder/assets/148320122/f5ecbd3f-2476-4ffa-b13f-060ff7757b88)
 
-## Usage
+## How to Use
+- Select an origin and a destination in the map. You can do this by searching in the home page or clicking 'Choose from map' and picking a marker.
+- The app will then display the shortest path from the origin to the destination.
+- If a path is not found, it will display a prompt. This can happen if the building or facility is disabled, as it may be under construction.
+- If you choose to type the origin or destination, it must be ensured that the exact name of the building, which can be checked in the search bar, is typed.
 
 ## Contributors
+- Carlos, Henry James R.
+- Domingo, Syruz Ken C.
+- Lagman, Fervicmar D.
+- Rustia, Julia Kyla
 
 ## License
 This project is licensed under the [MIT License](link/to/license).
