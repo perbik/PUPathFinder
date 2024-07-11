@@ -116,6 +116,50 @@
    - Open the command palette by pressing `Ctrl + Shift + P`.
    - Type `Flutter: Run` and press `Enter` to start the app on the emulator.
 
+## Running the Application on a Hardware Device
+
+### Using Android Studio
+
+1. **Install Android Studio:**
+   - Download and install Android Studio from the [official website](https://developer.android.com/studio).
+
+2. **Set Up Your Device:**
+   - Enable **Developer Options** on your Android device by going to **Settings > About Phone** and tapping **Build Number** seven times.
+   - Enable **USB Debugging** in **Developer Options**.
+
+3. **Connect Your Device:**
+   - Connect your Android device to your computer using a USB cable.
+   - Ensure your device is recognized by running `adb devices` in your terminal. If your device is listed, you're ready to proceed.
+
+4. **Run the Flutter App:**
+   - Open your Flutter project in Android Studio.
+   - Select your connected device from the device dropdown menu.
+   - Click the **Run** button or use the shortcut `Shift + F10` to start the app on your device.
+
+### Using Visual Studio Code
+
+1. **Install Visual Studio Code:**
+   - Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/).
+
+2. **Install Flutter and Dart Extensions:**
+   - Open VS Code.
+   - Go to the **Extensions** view by clicking the square icon in the sidebar or pressing `Ctrl + Shift + X`.
+   - Search for and install the **Flutter** and **Dart** extensions.
+
+3. **Set Up Your Device:**
+   - Enable **Developer Options** on your Android device by going to **Settings > About Phone** and tapping **Build Number** seven times.
+   - Enable **USB Debugging** in **Developer Options**.
+
+4. **Connect Your Device:**
+   - Connect your Android device to your computer using a USB cable.
+   - Ensure your device is recognized by running `adb devices` in your terminal. If your device is listed, you're ready to proceed.
+
+5. **Run the Flutter App:**
+   - Open your Flutter project in VS Code.
+   - Ensure your device is connected.
+   - Open the command palette by pressing `Ctrl + Shift + P`.
+   - Type `Flutter: Run` and press `Enter` to start the app on your device.
+
 By following these steps, you can set up and run your Flutter application on an emulator using either Android Studio or Visual Studio Code.
 
 
