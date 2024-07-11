@@ -3,7 +3,7 @@
 <h1 align="center">PUPathFinder</h1>
 
 <p align="justify" style="text-align: justify;">
-  The implementation of **Djikstra’s algorithm** in this project will be through a mobile application for user convenience. In the app, users will select a point of origin and a point of destination only from the given list of facilities in PUP - Mabini Campus. For instance, the user can pick Lagoon as a source or origin and Ninoy Aquino Library and Learning Resources Center (NALLRC) as the destination. It then displays the shortest possible path or route from the chosen origin to the destination using Dijkstra’s algorithm. In this project, the graph diagram will have facilities representing the nodes, while the usual routes represent the edges.
+  The implementation of <b>Djikstra’s algorithm</b> in this project will be through a mobile application for user convenience. In the app, users will select a point of origin and a point of destination only from the given list of facilities in PUP - Mabini Campus. For instance, the user can pick Lagoon as a source or origin and Ninoy Aquino Library and Learning Resources Center (NALLRC) as the destination. It then displays the shortest possible path or route from the chosen origin to the destination using Dijkstra’s algorithm. In this project, the graph diagram will have facilities representing the nodes, while the usual routes represent the edges.
 </p>
 
 
@@ -44,6 +44,8 @@
    
    ```sh
    git clone https://github.com/yourusername/your-repo-name.git
+
+3. 
    
 ## Technologies Utilized
 ### Development Tools:
@@ -64,8 +66,8 @@
 ![ss2](https://github.com/perbik/PUPathFinder/assets/148320122/f5ecbd3f-2476-4ffa-b13f-060ff7757b88)
 
 ## How to Use
-- Select an origin and a destination in the map. You can do this by searching in the home page or clicking 'Choose from map' and picking a marker.
-- The app will then display the shortest path from the origin to the destination.
+- Select an origin and a destination in the map. You can do this by searching in the home page or tapping 'Choose from map' and picking a marker.
+- Tap 'Find shortest path' and the app will then display the shortest path from the origin to the destination.
 - If a path is not found, it will display a prompt. This can happen if the building or facility is disabled, as it may be under construction.
 - If you choose to type the origin or destination, it must be ensured that the exact name of the building, which can be checked in the search bar, is typed.
 
